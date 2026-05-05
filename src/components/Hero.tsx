@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, FileText, Cpu, Database, LayoutDashboard } from 'lucide-react';
 import { GithubIcon } from './Icons';
+import Button from './Button';
 
 export default function Hero() {
   return (
@@ -42,35 +43,23 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <motion.a
-              href="#projects"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-lg hover:bg-opacity-90 transition-all shadow-xl shadow-blue-500/10"
-            >
-              View Work <ArrowRight className="w-4 h-4" />
-            </motion.a>
+            <a href="#projects">
+              <Button className="px-8 py-4" icon={<ArrowRight className="w-5 h-5" />}>
+                View Work
+              </Button>
+            </a>
             
             <div className="flex items-center gap-4">
-              <motion.a
-                href="https://github.com/RENUGASREE"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ y: -2 }}
-                className="p-4 glass rounded-lg hover:bg-white/10 transition-colors"
-                title="GitHub"
-              >
-                <GithubIcon className="w-6 h-6" />
-              </motion.a>
-              <motion.a
-                href="/resume.pdf"
-                target="_blank"
-                whileHover={{ y: -2 }}
-                className="p-4 glass rounded-lg hover:bg-white/10 transition-colors"
-                title="Resume"
-              >
-                <FileText className="w-6 h-6" />
-              </motion.a>
+              <a href="https://github.com/RENUGASREE" target="_blank" rel="noopener noreferrer">
+                <Button variant="icon">
+                  <GithubIcon className="w-6 h-6" />
+                </Button>
+              </a>
+              <a href="/resume.pdf" target="_blank">
+                <Button variant="secondary" className="px-6 py-4" icon={<FileText className="w-5 h-5" />}>
+                  Resume
+                </Button>
+              </a>
             </div>
           </div>
         </motion.div>

@@ -1,5 +1,6 @@
+import { LinkedinIcon, XIcon, GithubIcon } from './Icons';
 import { Mail } from 'lucide-react';
-import { GithubIcon, LinkedinIcon, XIcon } from './Icons';
+import Button from './Button';
 
 export default function Footer() {
   return (
@@ -13,18 +14,26 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex gap-6">
-            <a href="https://github.com/RENUGASREE" className="p-3 glass rounded-full hover:bg-blue-500/20 transition-all">
-              <GithubIcon className="w-5 h-5" />
+          <div className="flex gap-4">
+            <a href="https://github.com/RENUGASREE" target="_blank" rel="noopener noreferrer">
+              <Button variant="icon">
+                <GithubIcon className="w-5 h-5" />
+              </Button>
             </a>
-            <a href="#" className="p-3 glass rounded-full hover:bg-blue-500/20 transition-all">
-              <LinkedinIcon className="w-5 h-5" />
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <Button variant="icon">
+                <LinkedinIcon className="w-5 h-5" />
+              </Button>
             </a>
-            <a href="#" className="p-3 glass rounded-full hover:bg-blue-500/20 transition-all">
-              <XIcon className="w-5 h-5" />
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <Button variant="icon">
+                <XIcon className="w-5 h-5" />
+              </Button>
             </a>
-            <a href="mailto:renugasree@example.com" className="p-3 glass rounded-full hover:bg-blue-500/20 transition-all">
-              <Mail className="w-5 h-5" />
+            <a href="mailto:renugasree@example.com">
+              <Button variant="icon">
+                <Mail className="w-5 h-5" />
+              </Button>
             </a>
           </div>
         </div>

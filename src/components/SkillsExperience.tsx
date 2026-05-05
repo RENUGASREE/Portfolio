@@ -81,7 +81,7 @@ export default function SkillsExperience() {
           </div>
 
           {/* Experience Section */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7" id="experience">
             <h2 className="text-3xl font-bold mb-12">Engineering <span className="text-blue-500">Journey</span></h2>
             <div className="space-y-12">
               {experiences.map((exp, index) => (

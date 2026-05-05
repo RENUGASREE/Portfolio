@@ -1,7 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Layers, Server, Shield, Activity, Code2, Globe } from 'lucide-react';
+import { Layers, Server, Shield, Activity, Code2, Globe, ExternalLink } from 'lucide-react';
+import Button from './Button';
 
 export default function FeaturedCaseStudy() {
   return (
@@ -86,6 +87,11 @@ export default function FeaturedCaseStudy() {
                   <span>Optimized database queries for millisecond-latency performance tracking.</span>
                 </li>
               </ul>
+              <div className="pt-6">
+                <Button className="px-8 py-4" icon={<ExternalLink className="w-5 h-5" />}>
+                  Exploration Live System
+                </Button>
+              </div>
             </div>
           </div>
 

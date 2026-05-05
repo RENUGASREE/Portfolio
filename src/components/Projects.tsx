@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, Code, Database, Paintbrush } from 'lucide-react';
 import { GithubIcon } from './Icons';
+import Button from './Button';
 
 const projects = [
   {
@@ -50,7 +51,6 @@ export default function Projects() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -10 }}
               className="glass p-8 rounded-2xl flex flex-col h-full border-white/5 hover:border-blue-500/30 transition-all group"
             >
               <div className="mb-6 p-3 bg-white/5 rounded-xl inline-block w-fit group-hover:bg-blue-500/10 transition-colors">
@@ -82,11 +82,15 @@ export default function Projects() {
               </div>
 
               <div className="flex items-center gap-4 mt-auto pt-6 border-t border-white/5">
-                <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs font-semibold hover:text-blue-400 transition-colors">
-                  <GithubIcon className="w-4 h-4" /> GitHub
+                <a href={project.github} target="_blank" rel="noopener noreferrer">
+                  <Button variant="secondary" className="px-4 py-2 text-xs" icon={<GithubIcon className="w-4 h-4" />}>
+                    GitHub
+                  </Button>
                 </a>
-                <a href="#" className="flex items-center gap-2 text-xs font-semibold hover:text-blue-400 transition-colors">
-                  <ExternalLink className="w-4 h-4" /> Demo
+                <a href="#">
+                  <Button variant="secondary" className="px-4 py-2 text-xs" icon={<ExternalLink className="w-4 h-4" />}>
+                    Demo
+                  </Button>
                 </a>
               </div>
             </motion.div>
