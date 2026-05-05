@@ -1,7 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Github, FileText, Cpu, Database, Layout } from 'lucide-react';
+import { ArrowRight, FileText, Cpu, Database, LayoutDashboard } from 'lucide-react';
+import { GithubIcon } from './Icons';
 
 export default function Hero() {
   return (
@@ -59,7 +60,7 @@ export default function Hero() {
                 className="p-4 glass rounded-lg hover:bg-white/10 transition-colors"
                 title="GitHub"
               >
-                <Github className="w-6 h-6" />
+                <GithubIcon className="w-6 h-6" />
               </motion.a>
               <motion.a
                 href="/resume.pdf"
@@ -83,8 +84,8 @@ export default function Hero() {
         >
           <div className="flex items-center gap-2"><Cpu className="w-5 h-5" /> <span>PyTorch</span></div>
           <div className="flex items-center gap-2"><Database className="w-5 h-5" /> <span>PostgreSQL</span></div>
-          <div className="flex items-center gap-2"><Layout className="w-5 h-5" /> <span>Django</span></div>
-          <div className="flex items-center gap-2"><Github className="w-5 h-5" /> <span>CI/CD</span></div>
+          <div className="flex items-center gap-2"><LayoutDashboard className="w-5 h-5" /> <span>Django</span></div>
+          <div className="flex items-center gap-2"><GithubIcon className="w-5 h-5" /> <span>CI/CD</span></div>
         </motion.div>
       </div>
     </section>

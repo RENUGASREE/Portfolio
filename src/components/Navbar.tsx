@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import { Menu, Mail } from 'lucide-react';
+import { XIcon } from './Icons';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -54,7 +55,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X /> : <Menu />}
+          {isOpen ? <XIcon className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 

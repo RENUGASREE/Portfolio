@@ -2,32 +2,27 @@
 
 @theme {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-:root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --accent: #3b82f6;
-  --accent-foreground: #ffffff;
-  --card: #141414;
-  --card-foreground: #ededed;
-  --border: #262626;
-  --muted: #737373;
-  --muted-foreground: #a3a3a3;
+  --color-background: #0a0a0a;
+  --color-foreground: #ededed;
+  --color-accent: #3b82f6;
+  --color-border: #262626;
+  --color-card: #141414;
+  --color-muted: #737373;
 }
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: var(--color-border);
   }
   body {
     @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
 .glass {
-  @apply bg-opacity-10 backdrop-blur-md border border-white/10;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .gradient-text {

@@ -1,7 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, Code2, Database, Palette } from 'lucide-react';
+import { ExternalLink, Code, Database, Paintbrush } from 'lucide-react';
+import { GithubIcon } from './Icons';
 
 const projects = [
   {
@@ -11,7 +12,7 @@ const projects = [
     problem: "Generic e-commerce templates fail to convey brand luxury.",
     solution: "Developed a custom design system with micro-interactions.",
     github: "https://github.com/RENUGASREE",
-    icon: <Palette className="w-6 h-6 text-pink-400" />
+    icon: <Paintbrush className="w-6 h-6 text-pink-400" />
   },
   {
     title: "SASC E-Learning",
@@ -29,7 +30,7 @@ const projects = [
     problem: "Documenting growth over time.",
     solution: "Maintained as a versioned proof of continuous learning.",
     github: "https://github.com/RENUGASREE",
-    icon: <Code2 className="w-6 h-6 text-orange-400" />
+    icon: <Code className="w-6 h-6 text-orange-400" />
   }
 ];
 
@@ -82,7 +83,7 @@ export default function Projects() {
 
               <div className="flex items-center gap-4 mt-auto pt-6 border-t border-white/5">
                 <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs font-semibold hover:text-blue-400 transition-colors">
-                  <Github className="w-4 h-4" /> GitHub
+                  <GithubIcon className="w-4 h-4" /> GitHub
                 </a>
                 <a href="#" className="flex items-center gap-2 text-xs font-semibold hover:text-blue-400 transition-colors">
                   <ExternalLink className="w-4 h-4" /> Demo

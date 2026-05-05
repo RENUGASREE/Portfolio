@@ -1,4 +1,5 @@
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { GithubIcon, LinkedinIcon, XIcon } from './Icons';
 
 export default function Footer() {
   return (
@@ -14,13 +15,13 @@ export default function Footer() {
 
           <div className="flex gap-6">
             <a href="https://github.com/RENUGASREE" className="p-3 glass rounded-full hover:bg-blue-500/20 transition-all">
-              <Github className="w-5 h-5" />
+              <GithubIcon className="w-5 h-5" />
             </a>
             <a href="#" className="p-3 glass rounded-full hover:bg-blue-500/20 transition-all">
-              <Linkedin className="w-5 h-5" />
+              <LinkedinIcon className="w-5 h-5" />
             </a>
             <a href="#" className="p-3 glass rounded-full hover:bg-blue-500/20 transition-all">
-              <Twitter className="w-5 h-5" />
+              <XIcon className="w-5 h-5" />
             </a>
             <a href="mailto:renugasree@example.com" className="p-3 glass rounded-full hover:bg-blue-500/20 transition-all">
               <Mail className="w-5 h-5" />
