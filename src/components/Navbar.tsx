@@ -81,12 +81,16 @@ export default function Navbar() {
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-4">
-          <Button variant="secondary" className="px-5 py-2 text-sm" icon={<FileText className="w-4 h-4" />}>
-            Resume
-          </Button>
-          <Button className="px-5 py-2 text-sm" icon={<Mail className="w-4 h-4" />}>
-            Contact
-          </Button>
+          <a href="./resume.pdf" target="_blank">
+            <Button variant="secondary" className="px-5 py-2 text-sm" icon={<FileText className="w-4 h-4" />}>
+              Resume
+            </Button>
+          </a>
+          <a href="mailto:renugasree@example.com">
+            <Button className="px-5 py-2 text-sm" icon={<Mail className="w-4 h-4" />}>
+              Contact
+            </Button>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -137,12 +141,16 @@ export default function Navbar() {
               transition={{ delay: 0.4 }}
               className="flex flex-col gap-4 w-full px-12 mt-8"
             >
-              <Button className="w-full text-lg py-4" icon={<Mail className="w-5 h-5" />}>
-                Get in Touch
-              </Button>
-              <Button variant="secondary" className="w-full text-lg py-4" icon={<FileText className="w-5 h-5" />}>
-                Download CV
-              </Button>
+              <a href="mailto:renugasree@example.com" className="w-full">
+                <Button className="w-full text-lg py-4" icon={<Mail className="w-5 h-5" />}>
+                  Get in Touch
+                </Button>
+              </a>
+              <a href="./resume.pdf" target="_blank" className="w-full">
+                <Button variant="secondary" className="w-full text-lg py-4" icon={<FileText className="w-5 h-5" />}>
+                  Download CV
+                </Button>
+              </a>
             </motion.div>
           </motion.div>
         )}

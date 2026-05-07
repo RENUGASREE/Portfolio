@@ -1,4 +1,4 @@
-import { LinkedinIcon, XIcon, GithubIcon } from './Icons';
+import { LinkedinIcon, GithubIcon } from './Icons';
 import { Mail } from 'lucide-react';
 import Button from './Button';
 
@@ -25,11 +25,7 @@ export default function Footer() {
                 <LinkedinIcon className="w-5 h-5" />
               </Button>
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <Button variant="icon">
-                <XIcon className="w-5 h-5" />
-              </Button>
-            </a>
+
             <a href="mailto:renugasree@example.com">
               <Button variant="icon">
                 <Mail className="w-5 h-5" />

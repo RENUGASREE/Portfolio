@@ -88,9 +88,11 @@ export default function FeaturedCaseStudy() {
                 </li>
               </ul>
               <div className="pt-6">
-                <Button className="px-8 py-4" icon={<ExternalLink className="w-5 h-5" />}>
-                  Exploration Live System
-                </Button>
+                <a href="#">
+                  <Button className="px-8 py-4" icon={<ExternalLink className="w-5 h-5" />}>
+                    Exploration Live System
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

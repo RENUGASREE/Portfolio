@@ -55,7 +55,7 @@ export default function Hero() {
                   <GithubIcon className="w-6 h-6" />
                 </Button>
               </a>
-              <a href="/resume.pdf" target="_blank">
+              <a href="./resume.pdf" target="_blank">
                 <Button variant="secondary" className="px-6 py-4" icon={<FileText className="w-5 h-5" />}>
                   Resume
                 </Button>
