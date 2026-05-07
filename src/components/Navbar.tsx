@@ -82,7 +82,7 @@ export default function Navbar() {
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-4">
-          <a href="./resume.pdf" target="_blank">
+          <a href="/Portfolio/resume.pdf" target="_blank">
             <Button variant="secondary" className="px-5 py-2 text-sm" icon={<FileText className="w-4 h-4" />}>
               Resume
             </Button>
@@ -140,7 +140,7 @@ export default function Navbar() {
             >
 
 
-              <a href="./resume.pdf" target="_blank" className="w-full">
+              <a href="/Portfolio/resume.pdf" target="_blank" className="w-full">
                 <Button variant="secondary" className="w-full text-lg py-4" icon={<FileText className="w-5 h-5" />}>
                   Download CV
                 </Button>
