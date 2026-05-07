@@ -12,6 +12,7 @@ const navLinks = [
   { name: 'Projects', href: '#projects' },
   { name: 'Skills', href: '#skills' },
   { name: 'Experience', href: '#experience' },
+  { name: 'Contact', href: '#contact' },
 ];
 
 export default function Navbar() {
@@ -24,7 +25,7 @@ export default function Navbar() {
       setScrolled(window.scrollY > 20);
       
       // Scroll Spy Logic
-      const sections = ['projects', 'skills', 'experience'];
+      const sections = ['projects', 'skills', 'experience', 'contact'];
       let current = 'Home';
       
       for (const section of sections) {
@@ -86,11 +87,7 @@ export default function Navbar() {
               Resume
             </Button>
           </a>
-          <a href="mailto:renugasree@example.com">
-            <Button className="px-5 py-2 text-sm" icon={<Mail className="w-4 h-4" />}>
-              Contact
-            </Button>
-          </a>
+
         </div>
 
         {/* Mobile Toggle */}
@@ -141,11 +138,7 @@ export default function Navbar() {
               transition={{ delay: 0.4 }}
               className="flex flex-col gap-4 w-full px-12 mt-8"
             >
-              <a href="mailto:renugasree@example.com" className="w-full">
-                <Button className="w-full text-lg py-4" icon={<Mail className="w-5 h-5" />}>
-                  Get in Touch
-                </Button>
-              </a>
+
               <a href="./resume.pdf" target="_blank" className="w-full">
                 <Button variant="secondary" className="w-full text-lg py-4" icon={<FileText className="w-5 h-5" />}>
                   Download CV
