@@ -5,9 +5,9 @@ const isProd = process.env.NODE_ENV === 'production';
 const nextConfig: NextConfig = {
   output: 'export',
   // The repo name is 'Portfolio', so we use it as the base path
-  basePath: '/PORTFOLIO',
+  basePath: '/Portfolio',
   // Ensure assets are also loaded from the subfolder
-  assetPrefix: '/PORTFOLIO/',
+  assetPrefix: '/Portfolio/',
   images: {
     unoptimized: true,
   },
