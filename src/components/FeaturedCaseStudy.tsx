@@ -99,7 +99,7 @@ export default function FeaturedCaseStudy() {
                   Explore Full System
                 </Button>
               </a>
-              <a href="/resume.pdf" download>
+              <a href="/Portfolio/resume.pdf" download>
                 <Button variant="secondary" className="px-8 py-5" icon={<FileDown className="w-5 h-5" />}>
                   System Technicals
                 </Button>

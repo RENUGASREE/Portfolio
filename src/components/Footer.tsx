@@ -43,7 +43,7 @@ export default function Footer() {
                   Send an Email
                 </Button>
               </a>
-              <a href="/resume.pdf" download className="w-full sm:w-auto">
+              <a href="/Portfolio/resume.pdf" download className="w-full sm:w-auto">
                 <Button variant="secondary" className="w-full sm:w-auto px-12 py-5 text-lg h-16" icon={<FileDown className="w-5 h-5" />}>
                   Download CV
                 </Button>
