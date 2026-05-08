@@ -84,16 +84,10 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-5">
           <a href="/Portfolio/resume.pdf" download className="group">
-            <Button variant="secondary" className="px-6 py-2.5 text-sm h-11" icon={<FileText className="w-4 h-4 opacity-70 group-hover:opacity-100 transition-opacity" />}>
+            <Button className="px-6 py-2.5 text-sm h-11" icon={<FileText className="w-4 h-4" />}>
               Resume
-            </Button>
-          </a>
-          <a href="#contact">
-            <Button className="px-6 py-2.5 text-sm h-11 shadow-blue-500/10">
-              Contact
             </Button>
           </a>
         </div>
@@ -153,13 +147,8 @@ export default function Navbar() {
               <div className="h-[1px] w-full bg-white/5 mb-6" />
               <div className="flex flex-col gap-4">
                 <a href="/Portfolio/resume.pdf" download className="w-full">
-                  <Button variant="secondary" className="w-full py-5 text-lg" icon={<FileText className="w-5 h-5" />}>
+                  <Button className="w-full py-5 text-lg" icon={<FileText className="w-5 h-5" />}>
                     Download Resume
-                  </Button>
-                </a>
-                <a href="#contact" className="w-full" onClick={() => setIsOpen(false)}>
-                  <Button className="w-full py-5 text-lg">
-                    Get in Touch
                   </Button>
                 </a>
               </div>
