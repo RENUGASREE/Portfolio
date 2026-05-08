@@ -1,17 +1,12 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === 'production';
-
 const nextConfig: NextConfig = {
   output: 'export',
-  // The repo name is 'Portfolio', so we use it as the base path
-  basePath: '/Portfolio',
-  // Ensure assets are also loaded from the subfolder
-  assetPrefix: '/Portfolio/',
+  // Removed basePath/assetPrefix to align with root-domain deployment (Vercel/Custom Domain)
+  // as requested for the resume link fix (href="/resume.pdf").
   images: {
     unoptimized: true,
   },
-  // This helps with GitHub Pages' directory structure
   trailingSlash: true,
 };
 
