@@ -5,56 +5,60 @@ import { Briefcase, GraduationCap, Code2, Database, BrainCircuit, Terminal, Glob
 
 const skillGroups = [
   {
-    category: "Languages",
+    category: "Programming",
     icon: <Terminal className="w-5 h-5 text-blue-500" />,
-    skills: ["Python", "SQL", "JavaScript", "TypeScript"]
+    skills: ["Python", "SQL", "Java", "JavaScript", "TypeScript"]
   },
   {
-    category: "Intelligence & AI",
+    category: "Data & AI",
     icon: <BrainCircuit className="w-5 h-5 text-blue-500" />,
-    skills: ["Scikit-learn", "PyTorch", "NLP", "CV", "Deep Learning"]
+    skills: ["Pandas", "NumPy", "Scikit-learn", "PyTorch", "NLP", "Computer Vision", "Machine Learning", "Deep Learning"]
   },
   {
-    category: "Data Systems",
+    category: "Visualization",
     icon: <Database className="w-5 h-5 text-blue-500" />,
-    skills: ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Power BI"]
+    skills: ["Power BI", "Matplotlib", "Seaborn", "Excel"]
   },
   {
-    category: "Core Backend",
-    icon: <Code2 className="w-5 h-5 text-blue-500" />,
-    skills: ["Django", "Flask", "REST APIs", "FastAPI"]
-  },
-  {
-    category: "Core Frontend",
+    category: "Frontend",
     icon: <Globe className="w-5 h-5 text-blue-500" />,
-    skills: ["React", "Next.js", "Tailwind CSS", "Framer Motion"]
+    skills: ["React (Vite)", "HTML", "CSS", "JavaScript", "Tailwind CSS"]
   },
   {
-    category: "Engineering Ops",
+    category: "Backend",
+    icon: <Code2 className="w-5 h-5 text-blue-500" />,
+    skills: ["Django", "Flask", "REST APIs"]
+  },
+  {
+    category: "Tools & Other",
     icon: <Briefcase className="w-5 h-5 text-blue-500" />,
-    skills: ["Docker", "Git", "GitHub Actions", "AWS Architecture"]
+    skills: ["GitHub", "Docker", "Kubernetes (Basics)", "Jupyter Notebook", "Prompt Engineering", "Agile Methodologies"]
   }
 ];
 
 const experiences = [
   {
-    role: "AI/ML Engineering Lead",
-    company: "SASC Production Platform",
-    period: "2023 - PRESENT",
+    role: "Data Science Trainee",
+    company: "Besant Technologies",
+    period: "Recent",
     points: [
-      "Engineered high-performance ML inference pipelines, reducing prediction latency by 45% using optimized mastery vector logic.",
-      "Architected real-time visualization dashboards to derive actionable business insights from student performance datasets.",
-      "Spearheaded the migration to a containerized Docker environment, ensuring 99.9% deployment consistency across stages."
+      "Completed training in Python, SQL, Advanced Excel, and cloud computing fundamentals.",
+      "Built interactive dashboards using Power BI to visualize insights.",
+      "Worked on real-world case studies to apply data science concepts.",
+      "Applied Agile methodologies during project workflows.",
+      "Gained exposure to Docker and Kubernetes."
     ]
   },
   {
-    role: "Full Stack AI Developer (Freelance)",
-    company: "Reyan Product Suite",
-    period: "2022 - 2023",
+    role: "AI & Development Intern",
+    company: "VaultofCodes",
+    period: "Past",
     points: [
-      "Built premium full-stack interfaces for luxury AI-integrated brands, focusing on high-performance product discovery engines.",
-      "Integrated secure authentication systems and optimized database queries for complex 100+ SKU product catalogs.",
-      "Achieved industry-leading Lighthouse performance scores (98+) through advanced state management and lazy loading."
+      "Worked on AI, Prompt Engineering, Python, Java, and REST APIs.",
+      "Built frontend and backend applications to support project requirements.",
+      "Used Docker for containerization and environment consistency.",
+      "Participated in cloud deployment workflows.",
+      "Collaborated effectively in Agile development teams."
     ]
   }
 ];
@@ -76,9 +80,9 @@ export default function SkillsExperience() {
               viewport={{ once: true }}
               className="mb-16"
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Technical <br /><span className="text-blue-500">Infrastructure</span></h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Technical <br /><span className="text-blue-500">Skills</span></h2>
               <p className="text-white/50 text-lg leading-relaxed">
-                A robust stack designed for building, scaling, and deploying intelligent products.
+                A solid foundation in programming, data science, and modern full-stack technologies.
               </p>
             </motion.div>
 
@@ -117,9 +121,9 @@ export default function SkillsExperience() {
               viewport={{ once: true }}
               className="mb-16"
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Engineering <br /><span className="text-blue-500">Journey</span></h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Professional <br /><span className="text-blue-500">Experience</span></h2>
               <p className="text-white/50 text-lg leading-relaxed">
-                Transforming complex data challenges into production-ready software solutions.
+                Practical training and internships focused on AI, data science, and software development.
               </p>
             </motion.div>
 

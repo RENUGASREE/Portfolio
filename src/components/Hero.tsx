@@ -49,13 +49,13 @@ export default function Hero() {
             Available for AI/ML Engineering Opportunities
           </motion.div>
           
-          <h1 className="text-6xl md:text-8xl font-bold mb-8 tracking-tight leading-[0.95] md:leading-[0.95]">
-            Building <span className="gradient-text italic">Intelligent</span> <br />
-            Systems & Products
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 tracking-tight leading-[0.95] md:leading-[0.95]">
+            Building <span className="gradient-text italic">AI-Powered</span> <br />
+            Applications & Data Solutions
           </h1>
           
-          <p className="max-w-3xl mx-auto text-lg md:text-2xl text-white/60 mb-12 leading-relaxed font-medium">
-            I specialize in architecting end-to-end ML solutions, from <span className="text-white">model training</span> to <span className="text-white">production-grade deployment</span>. Bridging the gap between raw data and scalable AI products.
+          <p className="max-w-3xl mx-auto text-lg md:text-xl text-white/60 mb-12 leading-relaxed font-medium">
+            Aspiring AI/ML Engineer and Data Scientist with experience in Python, SQL, Machine Learning, React, Django, and REST APIs. Passionate about building intelligent applications and transforming data into meaningful insights.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-6">
@@ -89,19 +89,19 @@ export default function Hero() {
         >
           <div className="flex flex-col items-center gap-3">
              <Terminal className="w-6 h-6" />
-             <span className="text-[10px] uppercase tracking-widest font-bold">Systems Logic</span>
+             <span className="text-[10px] uppercase tracking-widest font-bold">Python & SQL</span>
           </div>
           <div className="flex flex-col items-center gap-3">
              <BrainCircuit className="w-6 h-6" />
-             <span className="text-[10px] uppercase tracking-widest font-bold">Neural Architectures</span>
+             <span className="text-[10px] uppercase tracking-widest font-bold">Machine Learning</span>
           </div>
           <div className="flex flex-col items-center gap-3">
              <Database className="w-6 h-6" />
-             <span className="text-[10px] uppercase tracking-widest font-bold">Data Engineering</span>
+             <span className="text-[10px] uppercase tracking-widest font-bold">Data Science</span>
           </div>
           <div className="flex flex-col items-center gap-3">
              <Globe className="w-6 h-6" />
-             <span className="text-[10px] uppercase tracking-widest font-bold">Scalable Deployment</span>
+             <span className="text-[10px] uppercase tracking-widest font-bold">Full-Stack Dev</span>
           </div>
         </motion.div>
       </div>

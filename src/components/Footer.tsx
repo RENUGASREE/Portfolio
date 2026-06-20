@@ -29,12 +29,12 @@ export default function Footer() {
             </div>
             
             <h2 className="text-5xl md:text-7xl font-bold mb-10 tracking-tight leading-[1.1]">
-              Ready to build <br />
-              <span className="gradient-text italic">something intelligent?</span>
+              Let's <br />
+              <span className="gradient-text italic">Connect</span>
             </h2>
             
             <p className="text-xl md:text-2xl text-white/40 mb-14 max-w-2xl mx-auto font-medium leading-relaxed">
-              I'm always open to discussing AI/ML projects, data engineering challenges, or full-stack opportunities. <span className="text-white/70 italic">Let's build the future together.</span>
+              I am actively seeking opportunities in AI, Machine Learning, Data Science, and Full-Stack Development. Feel free to reach out for internships, collaborations, or full-time opportunities.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -59,10 +59,10 @@ export default function Footer() {
           <div className="space-y-6">
             <div className="flex flex-col">
                 <h2 className="text-3xl font-bold tracking-tighter text-white">RENUGA<span className="text-blue-500">SREE</span></h2>
-                <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-blue-500/60">AI Engineer</span>
+                <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-blue-500/60">Aspiring AI/ML Engineer & Data Scientist</span>
             </div>
             <p className="text-white/40 max-w-sm text-base font-medium leading-relaxed">
-              Architecting end-to-end intelligent systems with a focus on production reliability and seamless UX.
+              Building intelligent applications with strong fundamentals, practical project experience, and full-stack development skills.
             </p>
           </div>
 
@@ -86,11 +86,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-bold uppercase tracking-[0.3em] text-white/20">
-          <p>© 2024 RENUGA SREE. PRODUCT ENGINEERED IN INDIA.</p>
-          <div className="flex gap-10">
-            <a href="#" className="hover:text-blue-500 transition-colors duration-300">Privacy Protocol</a>
-            <a href="#" className="hover:text-blue-500 transition-colors duration-300">System Terms</a>
-          </div>
+          <p>© {new Date().getFullYear()} RENUGA SREE.</p>
         </div>
       </div>
     </footer>

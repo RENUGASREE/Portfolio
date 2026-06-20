@@ -18,7 +18,7 @@ export default function FeaturedCaseStudy() {
             viewport={{ once: true }}
             className="flex items-center gap-3 text-xs font-bold tracking-[0.3em] text-blue-500 uppercase mb-6"
           >
-            <span className="w-12 h-[1.5px] bg-blue-600" /> Startup-Grade Case Study
+            <span className="w-12 h-[1.5px] bg-blue-600" /> Featured Project
           </motion.div>
           <motion.h3 
             initial={{ opacity: 0, y: 20 }}
@@ -30,8 +30,7 @@ export default function FeaturedCaseStudy() {
             <span className="gradient-text">Learning Assistant</span>
           </motion.h3>
           <p className="text-xl md:text-2xl text-white/50 max-w-4xl leading-relaxed font-medium">
-            A production-ready personalized education engine that dynamically adjusts curriculum difficulty 
-            based on real-time neural mastery mapping. <span className="text-white">Deployed using Docker and AWS infrastructure.</span>
+            A personalized education platform that provides an adaptive learning experience. <span className="text-white">Built with a modern full-stack architecture and deployed using Docker.</span>
           </p>
         </div>
 
@@ -43,18 +42,18 @@ export default function FeaturedCaseStudy() {
                 <div className="w-12 h-12 bg-blue-500/10 rounded-2xl flex items-center justify-center border border-blue-500/20">
                     <Shield className="w-6 h-6 text-blue-400" />
                 </div>
-                <h4 className="text-2xl font-bold text-white">The Challenge</h4>
+                <h4 className="text-2xl font-bold text-white">The Goal</h4>
                 <p className="text-white/60 leading-relaxed">
-                  Traditional e-learning platforms use a static, linear progression. This creates a "personalized learning gap" where high-performers are under-challenged and others are overwhelmed.
+                  To create a learning platform that goes beyond static progression, allowing users to experience a more personalized journey while tracking their progress effectively.
                 </p>
               </div>
               <div className="space-y-6">
                 <div className="w-12 h-12 bg-green-500/10 rounded-2xl flex items-center justify-center border border-green-500/20">
                     <CheckCircle2 className="w-6 h-6 text-green-400" />
                 </div>
-                <h4 className="text-2xl font-bold text-white">The Engineering Solution</h4>
+                <h4 className="text-2xl font-bold text-white">The Approach</h4>
                 <p className="text-white/60 leading-relaxed">
-                  Engineered an AI-driven adaptive engine using <span className="text-blue-400 font-mono italic text-sm">Mastery Vectors</span>. The system predicts optimal next-steps by analyzing student interaction patterns.
+                  Developed an adaptive learning system using <span className="text-blue-400 font-mono italic text-sm">React and Django REST API</span>. The platform tracks user interaction and updates their learning path dynamically.
                 </p>
               </div>
             </div>
@@ -63,32 +62,32 @@ export default function FeaturedCaseStudy() {
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-600/10 blur-[60px] rounded-full group-hover:bg-blue-600/20 transition-all duration-700" />
               
               <h4 className="text-xl font-bold mb-10 flex items-center gap-3">
-                <Layers className="w-5 h-5 text-blue-400" /> Engineering Architecture
+                <Layers className="w-5 h-5 text-blue-400" /> Technical Architecture
               </h4>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
                 <div className="space-y-2">
-                  <span className="text-[10px] uppercase tracking-widest font-bold text-blue-500/70">Frontend Engine</span>
-                  <p className="text-sm font-bold text-white/90">React + Tailwind UI</p>
+                  <span className="text-[10px] uppercase tracking-widest font-bold text-blue-500/70">Frontend</span>
+                  <p className="text-sm font-bold text-white/90">React + TypeScript</p>
                 </div>
                 <div className="space-y-2">
-                  <span className="text-[10px] uppercase tracking-widest font-bold text-blue-500/70">Logic Core</span>
-                  <p className="text-sm font-bold text-white/90">Django REST API</p>
+                  <span className="text-[10px] uppercase tracking-widest font-bold text-blue-500/70">Backend API</span>
+                  <p className="text-sm font-bold text-white/90">Django REST</p>
                 </div>
                 <div className="space-y-2">
-                  <span className="text-[10px] uppercase tracking-widest font-bold text-blue-500/70">State Matrix</span>
-                  <p className="text-sm font-bold text-white/90">PostgreSQL + Redis</p>
+                  <span className="text-[10px] uppercase tracking-widest font-bold text-blue-500/70">Database</span>
+                  <p className="text-sm font-bold text-white/90">PostgreSQL</p>
                 </div>
                 <div className="space-y-2">
                   <span className="text-[10px] uppercase tracking-widest font-bold text-blue-500/70">Containerization</span>
-                  <p className="text-sm font-bold text-white/90">Docker Hub Deployment</p>
+                  <p className="text-sm font-bold text-white/90">Docker</p>
                 </div>
                 <div className="space-y-2">
-                  <span className="text-[10px] uppercase tracking-widest font-bold text-blue-500/70">Intelligence</span>
-                  <p className="text-sm font-bold text-white/90">Mastery Vector API</p>
+                  <span className="text-[10px] uppercase tracking-widest font-bold text-blue-500/70">Logic</span>
+                  <p className="text-sm font-bold text-white/90">Python / Adaptive Flow</p>
                 </div>
                 <div className="space-y-2">
-                  <span className="text-[10px] uppercase tracking-widest font-bold text-blue-500/70">CI / CD</span>
-                  <p className="text-sm font-bold text-white/90">GitHub Actions V2</p>
+                  <span className="text-[10px] uppercase tracking-widest font-bold text-blue-500/70">Styling</span>
+                  <p className="text-sm font-bold text-white/90">Tailwind CSS</p>
                 </div>
               </div>
             </div>
@@ -96,12 +95,7 @@ export default function FeaturedCaseStudy() {
             <div className="flex flex-wrap items-center gap-6">
               <a href="https://github.com/RENUGASREE" target="_blank" rel="noopener noreferrer">
                 <Button className="px-10 py-5" icon={<ExternalLink className="w-5 h-5" />}>
-                  Explore Full System
-                </Button>
-              </a>
-              <a href="/Portfolio/resume.pdf" download>
-                <Button variant="secondary" className="px-8 py-5" icon={<FileDown className="w-5 h-5" />}>
-                  System Technicals
+                  View Repository
                 </Button>
               </a>
             </div>
@@ -109,7 +103,7 @@ export default function FeaturedCaseStudy() {
 
           {/* Right Column: Visual Showcase (5 cols) */}
           <div className="lg:col-span-5 space-y-10">
-            {/* Live Monitoring Mock */}
+            {/* Project Details */}
             <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -118,39 +112,23 @@ export default function FeaturedCaseStudy() {
             >
                 <div className="flex justify-between items-center mb-8">
                     <div className="flex items-center gap-3">
-                        <div className="w-2.5 h-2.5 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.6)]" />
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-white/60">System Monitor</span>
+                        <div className="w-2.5 h-2.5 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.6)]" />
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-white/60">System Components</span>
                     </div>
-                    <Activity className="w-4 h-4 text-blue-400" />
+                    <Server className="w-4 h-4 text-blue-400" />
                 </div>
                 <div className="space-y-6">
-                    <div className="space-y-3">
-                        <div className="flex justify-between text-xs font-bold uppercase tracking-tight">
-                            <span className="text-white/40">Model Accuracy</span>
-                            <span className="text-blue-400">98.4%</span>
-                        </div>
-                        <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden">
-                            <motion.div 
-                                initial={{ width: 0 }}
-                                whileInView={{ width: '98.4%' }}
-                                transition={{ duration: 1.5, ease: "easeOut" }}
-                                className="h-full bg-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.5)]" 
-                            />
-                        </div>
+                    <div className="space-y-2">
+                        <h5 className="text-sm font-bold text-white">Full-Stack Integration</h5>
+                        <p className="text-xs text-white/60 leading-relaxed">Connected a responsive React frontend with a robust Django REST API backend to manage user states.</p>
                     </div>
-                    <div className="space-y-3">
-                        <div className="flex justify-between text-xs font-bold uppercase tracking-tight">
-                            <span className="text-white/40">API Response Time</span>
-                            <span className="text-blue-400">142ms</span>
-                        </div>
-                        <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden">
-                            <motion.div 
-                                initial={{ width: 0 }}
-                                whileInView={{ width: '30%' }}
-                                transition={{ duration: 1.5, ease: "easeOut" }}
-                                className="h-full bg-blue-400 shadow-[0_0_15px_rgba(96,165,250,0.5)]" 
-                            />
-                        </div>
+                    <div className="space-y-2">
+                        <h5 className="text-sm font-bold text-white">Data Persistence</h5>
+                        <p className="text-xs text-white/60 leading-relaxed">Utilized PostgreSQL for reliable storage of user profiles, progress, and adaptive learning paths.</p>
+                    </div>
+                    <div className="space-y-2">
+                        <h5 className="text-sm font-bold text-white">Deployment Ready</h5>
+                        <p className="text-xs text-white/60 leading-relaxed">Packaged the application using Docker to ensure consistent environments across development and testing.</p>
                     </div>
                 </div>
             </motion.div>
@@ -168,21 +146,21 @@ export default function FeaturedCaseStudy() {
                   <div className="w-3 h-3 rounded-full bg-yellow-500/30" />
                   <div className="w-3 h-3 rounded-full bg-green-500/30" />
                 </div>
-                <span className="text-[10px] font-mono text-white/30 uppercase tracking-widest italic">inference_engine.py</span>
+                <span className="text-[10px] font-mono text-white/30 uppercase tracking-widest italic">learning_flow.py</span>
               </div>
               <div className="p-8 font-mono text-sm leading-relaxed overflow-x-auto bg-[#080808]">
                 <pre className="text-blue-200/80">
-{`def predict_mastery(student_id):
-    # Retrieve mastery vector
-    user_state = DB.get_state(student_id)
+{`def get_next_lesson(student_id):
+    # Fetch current progress
+    progress = db.get_user_progress(student_id)
     
-    # Run adaptive inference
-    next_node = AI.inference(
-        state=user_state,
-        target='optimal_challenge'
-    )
-    
-    return deploy_module(next_node)`}
+    # Determine next module based on performance
+    if progress.score > 80:
+        return load_module(level='advanced')
+    elif progress.score < 50:
+        return load_module(level='review')
+    else:
+        return load_module(level='standard')`}
                 </pre>
               </div>
               <div className="absolute bottom-4 right-6 opacity-20 pointer-events-none">
