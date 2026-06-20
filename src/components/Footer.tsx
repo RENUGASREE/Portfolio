@@ -72,7 +72,7 @@ export default function Footer() {
                 <GithubIcon className="w-6 h-6" />
               </Button>
             </a>
-            <a href="https://linkedin.com/in/renugasree" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/renuga-sree-64b8342a8/" target="_blank" rel="noopener noreferrer">
               <Button variant="icon" className="w-14 h-14">
                 <LinkedinIcon className="w-6 h-6" />
               </Button>
