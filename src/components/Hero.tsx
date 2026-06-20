@@ -50,30 +50,34 @@ export default function Hero() {
           </motion.div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-8 tracking-tight leading-[0.95] md:leading-[0.95]">
-            Building <span className="gradient-text italic">AI-Powered</span> <br />
-            Applications & Data Solutions
+            <span className="gradient-text italic">AI/ML Engineer</span> &<br />
+            Full-Stack Product Builder
           </h1>
           
-          <p className="max-w-3xl mx-auto text-lg md:text-xl text-white/60 mb-12 leading-relaxed font-medium">
-            Aspiring AI/ML Engineer and Data Scientist with experience in Python, SQL, Machine Learning, React, Django, and REST APIs. Passionate about building intelligent applications and transforming data into meaningful insights.
+          <p className="max-w-4xl mx-auto text-lg md:text-2xl text-white/80 mb-6 leading-relaxed font-medium">
+            I build intelligent applications, adaptive learning systems, and scalable web platforms by combining Artificial Intelligence, Data Science, and Modern Full-Stack Development.
+          </p>
+
+          <p className="max-w-3xl mx-auto text-base md:text-lg text-white/50 mb-12 leading-relaxed">
+            B.Tech Artificial Intelligence & Data Science student with experience in Machine Learning, React, Node.js, Django, REST APIs, and cloud-based application development. Passionate about transforming ideas into production-ready products.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-6">
             <a href="#projects">
               <Button className="px-10 py-5 text-lg" icon={<ArrowRight className="w-5 h-5" />}>
-                Explore My Work
+                View Projects
               </Button>
             </a>
             
             <div className="flex items-center gap-4">
-              <a href="https://github.com/RENUGASREE" target="_blank" rel="noopener noreferrer">
-                <Button variant="icon">
-                  <GithubIcon className="w-7 h-7" />
-                </Button>
-              </a>
               <a href="/Portfolio/resume.pdf" download>
                 <Button variant="secondary" className="px-8 py-5 text-lg" icon={<FileText className="w-5 h-5" />}>
                   Download Resume
+                </Button>
+              </a>
+              <a href="https://github.com/RENUGASREE" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="px-8 py-5 text-lg" icon={<GithubIcon className="w-5 h-5" />}>
+                  GitHub
                 </Button>
               </a>
             </div>
@@ -89,11 +93,11 @@ export default function Hero() {
         >
           <div className="flex flex-col items-center gap-3">
              <Terminal className="w-6 h-6" />
-             <span className="text-[10px] uppercase tracking-widest font-bold">Python & SQL</span>
+             <span className="text-[10px] uppercase tracking-widest font-bold">Python & Node.js</span>
           </div>
           <div className="flex flex-col items-center gap-3">
              <BrainCircuit className="w-6 h-6" />
-             <span className="text-[10px] uppercase tracking-widest font-bold">Machine Learning</span>
+             <span className="text-[10px] uppercase tracking-widest font-bold">AI Integration</span>
           </div>
           <div className="flex flex-col items-center gap-3">
              <Database className="w-6 h-6" />
@@ -101,7 +105,7 @@ export default function Hero() {
           </div>
           <div className="flex flex-col items-center gap-3">
              <Globe className="w-6 h-6" />
-             <span className="text-[10px] uppercase tracking-widest font-bold">Full-Stack Dev</span>
+             <span className="text-[10px] uppercase tracking-widest font-bold">React & Next.js</span>
           </div>
         </motion.div>
       </div>

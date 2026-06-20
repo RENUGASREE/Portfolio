@@ -9,6 +9,7 @@ import { cn } from '@/lib/utils';
 
 const navLinks = [
   { name: 'Home', href: '#' },
+  { name: 'About', href: '#about' },
   { name: 'Projects', href: '#projects' },
   { name: 'Skills', href: '#skills' },
   { name: 'Experience', href: '#experience' },
@@ -25,7 +26,7 @@ export default function Navbar() {
       setScrolled(window.scrollY > 20);
       
       // Improved Scroll Spy Logic
-      const sections = ['projects', 'skills', 'experience', 'contact'];
+      const sections = ['about', 'projects', 'skills', 'experience', 'contact'];
       let current = 'Home';
       
       for (const section of sections) {
