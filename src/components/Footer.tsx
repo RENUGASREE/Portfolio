@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer id="contact" className="relative pt-40 pb-20 overflow-hidden bg-[#050505]">
       {/* Visual Depth Elements */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-[#800000]/10 blur-[120px] rounded-full pointer-events-none" />
       
       {/* Contact Section Integrated - Unified Card */}
       <div className="section-container relative z-10 mb-40">
@@ -24,13 +24,13 @@ export default function Footer() {
             transition={{ duration: 0.8 }}
             className="relative z-10"
           >
-            <div className="inline-flex p-5 bg-blue-500/10 rounded-2xl mb-10 border border-blue-500/20 shadow-blue-500/10 shadow-lg">
-              <MessageSquare className="w-8 h-8 text-blue-500" />
+            <div className="inline-flex p-5 bg-[#800000]/20 rounded-2xl mb-10 border border-[#800000]/40 shadow-lg">
+              <MessageSquare className="w-8 h-8 text-[#C19A6B]" />
             </div>
             
             <h2 className="text-5xl md:text-7xl font-bold mb-10 tracking-tight leading-[1.1]">
               Let's <br />
-              <span className="gradient-text italic">Connect</span>
+              <span className="text-[#C19A6B] italic">Connect</span>
             </h2>
             
             <p className="text-xl md:text-2xl text-white/40 mb-14 max-w-2xl mx-auto font-medium leading-relaxed">
@@ -38,8 +38,8 @@ export default function Footer() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <a href="mailto:renugasree@example.com" className="w-full sm:w-auto">
-                <Button className="w-full sm:w-auto px-12 py-5 text-lg shadow-blue-600/20" icon={<Mail className="w-5 h-5" />}>
+              <a href="mailto:renugasree28@gmail.com" className="w-full sm:w-auto">
+                <Button className="w-full sm:w-auto px-12 py-5 text-lg shadow-[#800000]/20 bg-[#800000] hover:bg-[#600000] border-transparent" icon={<Mail className="w-5 h-5" />}>
                   Send an Email
                 </Button>
               </a>
@@ -58,8 +58,8 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-16">
           <div className="space-y-6">
             <div className="flex flex-col">
-                <h2 className="text-3xl font-bold tracking-tighter text-white">RENUGA<span className="text-blue-500">SREE</span></h2>
-                <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-blue-500/60">Aspiring AI/ML Engineer & Data Scientist</span>
+                <h2 className="text-3xl font-bold tracking-tighter text-white">RENUGA<span className="text-[#C19A6B]">SREE S</span></h2>
+                <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#C19A6B]/80">AI & Data Science Graduate</span>
             </div>
             <p className="text-white/40 max-w-sm text-base font-medium leading-relaxed">
               Building intelligent applications with strong fundamentals, practical project experience, and full-stack development skills.
@@ -68,17 +68,17 @@ export default function Footer() {
 
           <div className="flex flex-wrap gap-5">
             <a href="https://github.com/RENUGASREE" target="_blank" rel="noopener noreferrer">
-              <Button variant="icon" className="w-14 h-14">
+              <Button variant="icon" className="w-14 h-14 hover:border-[#C19A6B]/40 hover:bg-[#800000]/20 hover:text-[#C19A6B]">
                 <GithubIcon className="w-6 h-6" />
               </Button>
             </a>
             <a href="https://www.linkedin.com/in/renuga-sree-64b8342a8/" target="_blank" rel="noopener noreferrer">
-              <Button variant="icon" className="w-14 h-14">
+              <Button variant="icon" className="w-14 h-14 hover:border-[#C19A6B]/40 hover:bg-[#800000]/20 hover:text-[#C19A6B]">
                 <LinkedinIcon className="w-6 h-6" />
               </Button>
             </a>
-            <a href="mailto:renugasree@example.com">
-              <Button variant="icon" className="w-14 h-14">
+            <a href="mailto:renugasree28@gmail.com">
+              <Button variant="icon" className="w-14 h-14 hover:border-[#C19A6B]/40 hover:bg-[#800000]/20 hover:text-[#C19A6B]">
                 <Mail className="w-6 h-6" />
               </Button>
             </a>
@@ -86,7 +86,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-bold uppercase tracking-[0.3em] text-white/20">
-          <p>© {new Date().getFullYear()} RENUGA SREE.</p>
+          <p>© {new Date().getFullYear()} RENUGA SREE S.</p>
         </div>
       </div>
     </footer>

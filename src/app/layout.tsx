@@ -5,13 +5,13 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "Renuga Sree | AI/ML Engineer & Data Scientist",
-  description: "AI/ML Engineer specializing in building intelligent systems, deploying scalable ML models, and full-stack engineering.",
-  keywords: ["AI Engineer", "ML Engineer", "Data Scientist", "System Design", "Adaptive AI", "Renuga Sree"],
-  authors: [{ name: "Renuga Sree" }],
+  title: "Renuga Sree S | AI & Data Science Graduate",
+  description: "Artificial Intelligence and Data Science graduate experienced in Python, SQL, Machine Learning, AI, and full-stack development, building data-driven applications.",
+  keywords: ["AI Engineer", "Data Scientist", "Full-Stack Developer", "Python", "Machine Learning", "Renuga Sree S", "Data Analytics"],
+  authors: [{ name: "Renuga Sree S" }],
   openGraph: {
-    title: "Renuga Sree | AI/ML Engineer",
-    description: "Building Intelligent Systems with AI, Data & Scalable Engineering",
+    title: "Renuga Sree S | AI & Data Science Graduate",
+    description: "Artificial Intelligence and Data Science graduate experienced in Python, SQL, Machine Learning, AI, and full-stack development.",
     type: "website",
   },
 };
