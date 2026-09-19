@@ -14,7 +14,7 @@ const projects = [
     tech: ["React", "TypeScript", "Node.js", "Express.js", "MongoDB", "Vite", "Render"],
     github: "https://github.com/RENUGASREE",
     demo: "https://renu-s-collection-6lui.onrender.com/",
-    icon: <ShoppingBag className="w-6 h-6 text-pink-400" />
+    icon: <ShoppingBag className="w-6 h-6 text-[#5A1720]" />
   },
   {
     id: "02",
@@ -24,7 +24,7 @@ const projects = [
     tech: ["FastAPI", "SQLite", "React", "JWT Authentication"],
     github: "https://github.com/RENUGASREE",
     demo: "#",
-    icon: <Database className="w-6 h-6 text-blue-400" />
+    icon: <Database className="w-6 h-6 text-[#D5A66A]" />
   }
 ];
 

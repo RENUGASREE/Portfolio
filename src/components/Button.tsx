@@ -1,71 +1,65 @@
-'use client';
+import { cn } from "@/lib/utils"
 
-import React from 'react';
-import { motion, HTMLMotionProps } from 'framer-motion';
-import { cn } from '@/lib/utils';
-
-interface ButtonProps extends HTMLMotionProps<'button'> {
-  variant?: 'primary' | 'secondary' | 'icon' | 'outline';
-  children?: React.ReactNode;
-  icon?: React.ReactNode;
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: 'primary' | 'secondary' | 'outline' | 'icon'
+  icon?: React.ReactNode
+  children?: React.ReactNode
 }
 
 export default function Button({ 
   variant = 'primary', 
+  icon, 
   children, 
-  className, 
-  icon,
+  className,
   ...props 
 }: ButtonProps) {
   
   const variants = {
-    primary: "bg-blue-600 text-white shadow-[0_0_20px_rgba(37,99,235,0.15)] hover:shadow-[0_0_30px_rgba(37,99,235,0.3)] border-transparent",
-    secondary: "bg-white/5 text-white border-white/10 hover:bg-white/10 hover:border-white/20 backdrop-blur-sm",
-    outline: "bg-transparent text-white border-white/20 hover:border-blue-500/50 hover:bg-blue-500/5",
-    icon: "p-3 rounded-full border border-white/10 glass hover:bg-blue-500/20 hover:border-blue-500/40 text-white/80 hover:text-white"
-  };
+    primary: "bg-[#D5A66A] text-[#0B0B0B] shadow-[0_0_20px_rgba(213,166,106,0.15)] hover:shadow-[0_0_30px_rgba(213,166,106,0.3)] border-transparent",
+    secondary: "bg-white/5 text-[#F3EEE7] hover:bg-white/10 border-white/10",
+    outline: "bg-transparent text-[#F3EEE7] border-[rgba(213,166,106,0.5)] hover:bg-[#D5A66A]/10 hover:border-[#D5A66A]",
+    icon: "p-3 rounded-full border border-white/10 glass hover:bg-[#D5A66A]/10 hover:border-[#D5A66A]/40 text-[#A8A29B] hover:text-[#D5A66A]"
+  }
 
-  const baseStyles = "relative flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl font-bold tracking-tight transition-all duration-300 border focus:outline-none focus:ring-2 focus:ring-blue-500/50 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden group text-sm md:text-base";
+  const baseStyles = "relative flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl font-bold tracking-tight transition-all duration-300 border focus:outline-none focus:ring-2 focus:ring-[#D5A66A]/50 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden group text-sm md:text-base";
+  
+  // Specific style for icon-only variant
+  if (variant === 'icon') {
+    return (
+      <button 
+        className={cn(variants.icon, "relative overflow-hidden group focus:outline-none focus:ring-2 focus:ring-[#D5A66A]/50 transition-all duration-300", className)} 
+        {...props}
+      >
+        <span className="relative z-10">{children}</span>
+        <div className="absolute inset-0 bg-[#D5A66A]/0 group-hover:bg-[#D5A66A]/10 transition-colors duration-500 rounded-full" />
+      </button>
+    )
+  }
 
   return (
-    <motion.button
-      whileHover={{ y: -3, scale: 1.01 }}
-      whileTap={{ scale: 0.98 }}
-      transition={{ type: "spring", stiffness: 400, damping: 20 }}
-      className={cn(
-        variant === 'icon' ? variants.icon : baseStyles + " " + variants[variant],
-        className
-      )}
+    <button 
+      className={cn(baseStyles, variants[variant], className)}
       {...props}
     >
-      {/* Shine Effect for Primary */}
-      {variant === 'primary' && (
-        <motion.div 
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full"
-          animate={{ x: ["-100%", "200%"] }}
-          transition={{ duration: 3, repeat: Infinity, repeatDelay: 4, ease: "easeInOut" }}
-        />
-      )}
+      {/* Premium Hover Glow Effect */}
+      <div className="absolute inset-0 bg-[#D5A66A]/0 group-hover:bg-[#D5A66A]/10 transition-colors duration-500" />
+      
+      {/* Animated Gradient Shine */}
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-[-20deg]" />
+      </div>
 
-      {/* Hover Background Glow */}
-      <div className="absolute inset-0 bg-blue-400/0 group-hover:bg-blue-400/5 transition-colors duration-500" />
-      
-      <span className="relative z-10 flex items-center gap-2.5">
+      <span className="relative z-10 flex items-center gap-2">
         {children}
-        {icon && (
-          <motion.span 
-            className="transition-transform duration-300"
-            variants={{
-              hover: { x: 4 }
-            }}
-          >
-            {icon}
-          </motion.span>
-        )}
       </span>
+      {icon && (
+        <span className="relative z-10 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300 text-current">
+          {icon}
+        </span>
+      )}
       
-      {/* Subtle Bottom Highlight */}
-      <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-blue-400/0 group-hover:bg-blue-400/50 transition-all duration-500 blur-[2px]" />
-    </motion.button>
-  );
+      {/* Edge Highlight for Premium Feel */}
+      <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#D5A66A]/0 group-hover:bg-[#D5A66A]/50 transition-all duration-500 blur-[2px]" />
+    </button>
+  )
 }
