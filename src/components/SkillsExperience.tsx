@@ -5,27 +5,27 @@ import { GraduationCap, Code2, Database, BrainCircuit, Terminal, Globe, Award, C
 const skillGroups = [
   {
     category: "Programming & Databases",
-    icon: <Terminal className="w-4 h-4 text-[#D2A66D]" />,
+    icon: <Terminal className="w-4 h-4 text-primary" />,
     skills: ["Python", "SQL", "Java", "MongoDB", "SQLite"]
   },
   {
     category: "Data Analytics & Visualization",
-    icon: <Database className="w-4 h-4 text-[#D2A66D]" />,
+    icon: <Database className="w-4 h-4 text-primary" />,
     skills: ["Power BI", "Microsoft Excel", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Data Analysis", "Data Visualization"]
   },
   {
     category: "AI & Machine Learning",
-    icon: <BrainCircuit className="w-4 h-4 text-[#D2A66D]" />,
+    icon: <BrainCircuit className="w-4 h-4 text-primary" />,
     skills: ["Machine Learning", "Artificial Intelligence", "Deep Learning", "Generative AI", "scikit-learn", "K-Means Clustering", "RFM Analysis"]
   },
   {
     category: "Web Development",
-    icon: <Globe className="w-4 h-4 text-[#D2A66D]" />,
+    icon: <Globe className="w-4 h-4 text-primary" />,
     skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Node.js", "Express.js", "FastAPI"]
   },
   {
     category: "Tools & Platforms",
-    icon: <Code2 className="w-4 h-4 text-[#D2A66D]" />,
+    icon: <Code2 className="w-4 h-4 text-primary" />,
     skills: ["Git", "GitHub", "VS Code", "Google Colab", "Jupyter Notebook"]
   }
 ];
@@ -84,10 +84,10 @@ const certifications = [
 
 export default function SkillsExperience() {
   return (
-    <section id="skills" className="py-28 md:py-32 bg-[#080808] relative overflow-hidden border-t border-[rgba(210,166,109,0.12)]">
+    <section id="skills" className="py-28 md:py-32 bg-background relative overflow-hidden border-t border-border transition-colors duration-300">
       
-      {/* Subtle Glows */}
-      <div className="absolute top-1/3 left-0 w-[450px] h-[450px] bg-[#5A1720]/10 blur-[140px] rounded-full pointer-events-none" />
+      {/* Subtle Glow */}
+      <div className="absolute top-1/3 left-0 w-[450px] h-[450px] bg-secondary/10 blur-[140px] rounded-full pointer-events-none" />
 
       <div className="section-container relative z-10">
         
@@ -97,24 +97,24 @@ export default function SkillsExperience() {
           {/* LEFT: Technical Skills (5 cols) */}
           <div className="lg:col-span-5">
             <div className="mb-10">
-              <div className="inline-flex items-center gap-2 px-3 py-1 mb-3 text-xs font-semibold tracking-[0.2em] text-[#D2A66D] uppercase border border-[rgba(210,166,109,0.3)] rounded-full bg-[rgba(90,23,32,0.15)]">
+              <div className="inline-flex items-center gap-2 px-3 py-1 mb-3 text-xs font-semibold tracking-[0.2em] text-primary uppercase border border-border rounded-full bg-surface-soft">
                 Core Competencies
               </div>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#F5F3EF] mb-3">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-3">
                 Technical Skills
               </h2>
-              <p className="text-sm text-[#A8A29B] leading-relaxed">
+              <p className="text-sm text-muted leading-relaxed">
                 Structured domain skills across Data Analytics, AI/ML engineering, databases, and full-stack software development.
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-5">
               {skillGroups.map((group) => (
                 <div 
                   key={group.category}
-                  className="p-5 rounded-2xl bg-[rgba(255,255,255,0.02)] border border-[rgba(210,166,109,0.16)]"
+                  className="p-5 rounded-2xl bg-surface border border-card-border shadow-xs"
                 >
-                  <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#D2A66D] mb-3">
+                  <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-primary mb-3">
                     {group.icon}
                     <span>{group.category}</span>
                   </div>
@@ -123,7 +123,7 @@ export default function SkillsExperience() {
                     {group.skills.map((skill) => (
                       <span 
                         key={skill}
-                        className="px-3 py-1 text-xs font-medium rounded-lg bg-[rgba(255,255,255,0.03)] border border-[rgba(210,166,109,0.16)] text-[#F5F3EF]"
+                        className="px-3 py-1 text-xs font-medium rounded-lg bg-chip-bg border border-border text-foreground"
                       >
                         {skill}
                       </span>
@@ -140,40 +140,40 @@ export default function SkillsExperience() {
             {/* Experience Section */}
             <div>
               <div className="mb-8">
-                <div className="inline-flex items-center gap-2 px-3 py-1 mb-3 text-xs font-semibold tracking-[0.2em] text-[#D2A66D] uppercase border border-[rgba(210,166,109,0.3)] rounded-full bg-[rgba(90,23,32,0.15)]">
+                <div className="inline-flex items-center gap-2 px-3 py-1 mb-3 text-xs font-semibold tracking-[0.2em] text-primary uppercase border border-border rounded-full bg-surface-soft">
                   Practical Track Record
                 </div>
-                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#F5F3EF] mb-3">
+                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-3">
                   Professional Experience
                 </h2>
-                <p className="text-sm text-[#A8A29B] leading-relaxed">
+                <p className="text-sm text-muted leading-relaxed">
                   Real-world data science training and hands-on software development internship experience.
                 </p>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-5">
                 {experiences.map((exp) => (
                   <div 
                     key={exp.role + exp.company}
-                    className="p-6 sm:p-7 rounded-2xl bg-[rgba(255,255,255,0.02)] border border-[rgba(210,166,109,0.18)]"
+                    className="p-6 sm:p-7 rounded-2xl bg-surface border border-card-border shadow-xs"
                   >
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
-                      <h3 className="text-lg sm:text-xl font-bold text-[#F5F3EF]">
+                      <h3 className="text-lg sm:text-xl font-bold text-foreground">
                         {exp.role}
                       </h3>
-                      <span className="text-xs font-mono font-semibold text-[#D2A66D]">
+                      <span className="text-xs font-mono font-semibold text-primary">
                         {exp.period}
                       </span>
                     </div>
 
-                    <div className="text-xs sm:text-sm font-medium text-[#D2A66D]/90 mb-4">
-                      {exp.company} • <span className="text-[#A8A29B]">{exp.location}</span>
+                    <div className="text-xs sm:text-sm font-medium text-primary mb-4">
+                      {exp.company} • <span className="text-muted">{exp.location}</span>
                     </div>
 
-                    <ul className="space-y-2.5 text-xs sm:text-sm text-[#A8A29B]">
+                    <ul className="space-y-2.5 text-xs sm:text-sm text-muted">
                       {exp.points.map((pt, i) => (
                         <li key={i} className="flex items-start gap-2.5">
-                          <CheckCircle2 className="w-4 h-4 text-[#D2A66D] shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                           <span className="leading-relaxed">{pt}</span>
                         </li>
                       ))}
@@ -184,34 +184,34 @@ export default function SkillsExperience() {
             </div>
 
             {/* Education Section */}
-            <div className="pt-6 border-t border-[rgba(210,166,109,0.16)]">
-              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#D2A66D] mb-4">
-                <GraduationCap className="w-4 h-4 text-[#D2A66D]" />
+            <div className="pt-6 border-t border-border">
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
+                <GraduationCap className="w-4 h-4 text-primary" />
                 <span>Education</span>
               </div>
 
-              <div className="p-6 rounded-2xl bg-[rgba(255,255,255,0.02)] border border-[rgba(210,166,109,0.18)]">
+              <div className="p-6 rounded-2xl bg-surface border border-card-border shadow-xs">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
-                  <h3 className="text-lg font-bold text-[#F5F3EF]">
+                  <h3 className="text-lg font-bold text-foreground">
                     B.Tech in Artificial Intelligence and Data Science
                   </h3>
-                  <span className="text-xs font-mono font-semibold text-[#D2A66D]">
+                  <span className="text-xs font-mono font-semibold text-primary">
                     2022 – 2026
                   </span>
                 </div>
-                <p className="text-sm font-medium text-[#D2A66D]/90 mb-1">
+                <p className="text-sm font-medium text-primary mb-1">
                   Grace College of Engineering, Thoothukudi
                 </p>
-                <p className="text-xs text-[#A8A29B]">
+                <p className="text-xs text-muted">
                   Anna University
                 </p>
               </div>
             </div>
 
             {/* Certifications Section */}
-            <div className="pt-6 border-t border-[rgba(210,166,109,0.16)]">
-              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#D2A66D] mb-4">
-                <Award className="w-4 h-4 text-[#D2A66D]" />
+            <div className="pt-6 border-t border-border">
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
+                <Award className="w-4 h-4 text-primary" />
                 <span>Verified Certifications</span>
               </div>
 
@@ -219,14 +219,14 @@ export default function SkillsExperience() {
                 {certifications.map((cert) => (
                   <div 
                     key={cert.title}
-                    className="p-4 rounded-xl bg-[rgba(255,255,255,0.02)] border border-[rgba(210,166,109,0.16)] hover:border-[#D2A66D]/40 transition-colors"
+                    className="p-4 rounded-xl bg-surface border border-card-border shadow-xs hover:border-primary/50 transition-colors"
                   >
-                    <h4 className="text-xs sm:text-sm font-semibold text-[#F5F3EF] mb-1.5 leading-snug">
+                    <h4 className="text-xs sm:text-sm font-semibold text-foreground mb-1.5 leading-snug">
                       {cert.title}
                     </h4>
-                    <div className="flex items-center justify-between text-xs text-[#A8A29B]">
+                    <div className="flex items-center justify-between text-xs text-muted">
                       <span>{cert.issuer}</span>
-                      <span className="text-[#D2A66D] font-mono text-[11px]">{cert.date}</span>
+                      <span className="text-primary font-mono text-[11px]">{cert.date}</span>
                     </div>
                   </div>
                 ))}

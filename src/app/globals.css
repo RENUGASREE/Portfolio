@@ -1,34 +1,96 @@
 @import "tailwindcss";
 
+:root,
+html[data-theme="dark"],
+html:not([data-theme="light"]) {
+  --background: #080808;
+  --surface: #0D0D0D;
+  --surface-soft: rgba(255, 255, 255, 0.03);
+  --foreground: #F5F3EF;
+  --muted: #A8A29B;
+  --primary: #D2A66D;
+  --primary-soft: #E5C79A;
+  --secondary: #5A1720;
+  --secondary-soft: #7D4149;
+  --border: rgba(210, 166, 109, 0.16);
+  --card-border: rgba(210, 166, 109, 0.16);
+  --card-bg: rgba(255, 255, 255, 0.02);
+  --chip-bg: rgba(210, 166, 109, 0.08);
+  --navbar-bg: rgba(8, 8, 8, 0.85);
+  --navbar-border: rgba(210, 166, 109, 0.12);
+  --grid-color: rgba(125, 65, 73, 0.15);
+  --glow-primary: rgba(90, 23, 32, 0.18);
+  --glow-secondary: rgba(210, 166, 109, 0.10);
+  --primary-contrast: #080808;
+  --code-bg: #0D0D0D;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+html[data-theme="light"] {
+  --background: #FAF6F0;
+  --surface: #FFFFFF;
+  --surface-soft: #FFFFFF;
+  --foreground: #1A1A1A;
+  --muted: #5F5954;
+  --primary: #5A1720;
+  --primary-soft: #7D4149;
+  --secondary: #D2A66D;
+  --secondary-soft: #E8D4B7;
+  --border: rgba(210, 166, 109, 0.30);
+  --card-border: rgba(210, 166, 109, 0.25);
+  --card-bg: #FFFFFF;
+  --chip-bg: rgba(210, 166, 109, 0.14);
+  --navbar-bg: rgba(250, 246, 240, 0.90);
+  --navbar-border: rgba(210, 166, 109, 0.25);
+  --grid-color: rgba(90, 23, 32, 0.06);
+  --glow-primary: rgba(210, 166, 109, 0.15);
+  --glow-secondary: rgba(90, 23, 32, 0.08);
+  --primary-contrast: #F5F3EF;
+  --code-bg: #141414;
+  --shadow-color: rgba(90, 23, 32, 0.06);
+}
+
 @theme {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --color-background: #080808;
-  --color-foreground: #F5F3EF;
-  --color-accent: #D2A66D;
-  --color-border: rgba(210, 166, 109, 0.16);
-  --color-card: rgba(255, 255, 255, 0.03);
-  --color-muted: #A8A29B;
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-soft: var(--surface-soft);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-primary: var(--primary);
+  --color-primary-soft: var(--primary-soft);
+  --color-secondary: var(--secondary);
+  --color-secondary-soft: var(--secondary-soft);
+  --color-border: var(--border);
+  --color-card-border: var(--card-border);
+  --color-card-bg: var(--card-bg);
+  --color-chip-bg: var(--chip-bg);
+  --color-navbar-bg: var(--navbar-bg);
+  --color-navbar-border: var(--navbar-border);
+  --color-primary-contrast: var(--primary-contrast);
+  --color-code-bg: var(--code-bg);
 }
 
 @layer base {
   * {
-    border-color: var(--color-border);
+    border-color: var(--border);
   }
   body {
-    @apply bg-[#080808] text-[#F5F3EF];
-    background-color: #080808;
-    color: #F5F3EF;
+    background-color: var(--background);
+    color: var(--foreground);
+    transition: background-color 0.25s ease, color 0.25s ease;
   }
 }
 
 .glass {
-  background-color: rgba(255, 255, 255, 0.03);
+  background-color: var(--surface-soft);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(210, 166, 109, 0.16);
+  border: 1px solid var(--card-border);
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#D2A66D] via-[#F3EEE7] to-[#D2A66D];
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(135deg, var(--primary) 0%, var(--primary-soft) 50%, var(--primary) 100%);
 }
 
 .section-container {
@@ -36,10 +98,10 @@
 }
 
 .hero-gradient {
-  background: radial-gradient(circle at 50% 50%, rgba(90, 23, 32, 0.15) 0%, transparent 60%);
+  background: radial-gradient(circle at 50% 50%, var(--glow-primary) 0%, transparent 60%);
 }
 
 .grid-pattern {
-  background-image: radial-gradient(rgba(125, 65, 73, 0.15) 1px, transparent 1px);
+  background-image: radial-gradient(var(--grid-color) 1px, transparent 1px);
   background-size: 36px 36px;
 }

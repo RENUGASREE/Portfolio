@@ -7,33 +7,33 @@ const capabilities = [
   {
     title: "Data Analysis & Visualization",
     skills: "Python • SQL • Power BI • Excel",
-    icon: <BarChart3 className="w-5 h-5 text-[#5A1720]" />
+    icon: <BarChart3 className="w-5 h-5 text-primary" />
   },
   {
     title: "Machine Learning & AI",
     skills: "Machine Learning • Deep Learning • Generative AI",
-    icon: <Brain className="w-5 h-5 text-[#5A1720]" />
+    icon: <Brain className="w-5 h-5 text-primary" />
   },
   {
     title: "Data-Driven Applications",
     skills: "Analytics • Intelligent Systems • Databases",
-    icon: <Database className="w-5 h-5 text-[#5A1720]" />
+    icon: <Database className="w-5 h-5 text-primary" />
   },
   {
     title: "Full-Stack Development",
     skills: "React • Node.js • APIs • MongoDB",
-    icon: <Layers className="w-5 h-5 text-[#5A1720]" />
+    icon: <Layers className="w-5 h-5 text-primary" />
   }
 ];
 
 export default function About() {
   return (
-    <section id="about" className="py-24 md:py-32 bg-[#FAF6F0] text-[#1A1A1A] relative overflow-hidden">
+    <section id="about" className="py-24 md:py-32 bg-background text-foreground relative overflow-hidden transition-colors duration-300 border-t border-border">
       {/* Editorial Decorative Background Elements */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[rgba(210,166,109,0.12)] blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[rgba(90,23,32,0.06)] blur-[100px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/10 blur-[100px] rounded-full pointer-events-none" />
 
-      <div className="section-container relative z-10 py-6">
+      <div className="section-container relative z-10 py-4">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
           {/* Left Column: Portrait / Editorial Image Frame (5 cols on lg) */}
@@ -46,25 +46,32 @@ export default function About() {
           >
             <div className="relative w-full max-w-md">
               {/* Warm Editorial Frame */}
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
-                <div className="aspect-[4/5] w-full overflow-hidden bg-[#E8E1D7]">
+              <div className="relative rounded-3xl overflow-hidden shadow-xl border-2 border-border bg-surface">
+                <div className="aspect-[4/5] w-full overflow-hidden bg-surface-soft relative">
                   <img 
-                    src="/Portfolio/renuga-data-science-profile.png" 
-                    alt="Renuga Sree S - Data Science Graduate"
-                    className="w-full h-full object-cover object-[18%_center]"
+                    src="/Portfolio/renuga-about-portrait.png" 
+                    alt="Renuga Sree S - Professional Portrait"
+                    className="w-full h-full object-cover object-[20%_20%]"
+                    onError={(e) => {
+                      // Fallback to banner portrait until user adds renuga-about-portrait.png
+                      const target = e.currentTarget;
+                      if (!target.src.endsWith('/Portfolio/renuga-data-science-profile.png')) {
+                        target.src = '/Portfolio/renuga-data-science-profile.png';
+                      }
+                    }}
                   />
                 </div>
                 
                 {/* Banner-inspired Subtle Caption Bar */}
-                <div className="p-4 bg-white border-t border-[#E8E1D7] flex items-center justify-between text-xs text-[#5A1720] font-medium">
-                  <span className="font-semibold tracking-wide">Renuga Sree S</span>
-                  <span className="text-[#7D4149] italic">Better Data • Brighter Decisions</span>
+                <div className="p-4 bg-surface border-t border-border flex items-center justify-between text-xs text-primary font-medium">
+                  <span className="font-semibold tracking-wide text-foreground">Renuga Sree S</span>
+                  <span className="text-primary italic">Better Data • Brighter Decisions</span>
                 </div>
               </div>
 
-              {/* Decorative Banner Quote Tag */}
+              {/* Decorative Banner Quote Tag in HTML */}
               <div className="mt-4 text-center lg:text-left">
-                <span className="font-serif italic text-sm text-[#7D4149] tracking-wider block">
+                <span className="font-serif italic text-sm text-primary tracking-wider block">
                   Learning. Creating. Growing. ...Always
                 </span>
               </div>
@@ -80,19 +87,19 @@ export default function About() {
             className="lg:col-span-7 flex flex-col justify-center"
           >
             {/* Small decorative label */}
-            <div className="flex items-center gap-3 text-xs font-bold tracking-[0.25em] text-[#7D4149] uppercase mb-3">
-              <span className="w-8 h-[2px] bg-[#5A1720]" />
-              Personal Profile &amp; Focus
+            <div className="flex items-center gap-2.5 text-xs font-bold tracking-[0.25em] text-primary uppercase mb-3">
+              <span className="w-8 h-[2px] bg-primary" />
+              PERSONAL PROFILE &amp; FOCUS
             </div>
 
             {/* Primary Heading */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 tracking-tight text-[#1A1A1A] leading-[1.15]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 tracking-tight text-foreground leading-[1.15]">
               Turning Data, AI &amp; Code <br className="hidden sm:block" />
-              <span className="text-[#5A1720] font-serif italic">Into Practical Solutions</span>
+              <span className="text-primary font-serif italic">Into Practical Solutions</span>
             </h2>
 
             {/* Content paragraph */}
-            <p className="text-base sm:text-lg text-[#333333] leading-relaxed mb-8 font-normal">
+            <p className="text-base sm:text-lg text-muted leading-relaxed mb-8 font-normal">
               Artificial Intelligence and Data Science graduate with six months of Data Science training and hands-on experience in Python, SQL, Power BI, Machine Learning, Artificial Intelligence, Deep Learning, and web development. I enjoy developing data-driven, AI-based, and full-stack applications that solve practical problems.
             </p>
 
@@ -101,15 +108,15 @@ export default function About() {
               {capabilities.map((cap) => (
                 <div 
                   key={cap.title}
-                  className="p-4 rounded-2xl bg-white border border-[rgba(210,166,109,0.3)] shadow-sm hover:shadow-md hover:border-[#5A1720]/40 transition-all duration-300"
+                  className="p-4.5 rounded-2xl bg-surface border border-card-border shadow-xs hover:border-primary/50 transition-all duration-200"
                 >
-                  <div className="w-9 h-9 rounded-xl bg-[#FAF6F0] flex items-center justify-center border border-[#E8E1D7] mb-3">
+                  <div className="w-9 h-9 rounded-xl bg-chip-bg flex items-center justify-center border border-border mb-3">
                     {cap.icon}
                   </div>
-                  <h3 className="text-sm font-bold text-[#1A1A1A] mb-1">
+                  <h3 className="text-sm font-bold text-foreground mb-1">
                     {cap.title}
                   </h3>
-                  <p className="text-xs font-medium text-[#5A1720]">
+                  <p className="text-xs font-medium text-primary">
                     {cap.skills}
                   </p>
                 </div>

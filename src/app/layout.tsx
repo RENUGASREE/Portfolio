@@ -53,8 +53,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} font-sans antialiased bg-[#080808] text-[#F5F3EF]`}>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function() {
+              try {
+                var saved = localStorage.getItem('portfolio-theme');
+                var pref = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+                var theme = saved || pref || 'dark';
+                document.documentElement.setAttribute('data-theme', theme);
+              } catch (e) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+              }
+            })();`,
+          }}
+        />
+      </head>
+      <body className={`${inter.variable} font-sans antialiased min-h-screen bg-background text-foreground`}>
         {children}
       </body>
     </html>
