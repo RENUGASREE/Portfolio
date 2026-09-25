@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, FileText, Mail, Terminal, Database, BrainCircuit, Globe, TrendingUp, Cpu, Sparkles } from 'lucide-react';
+import { ArrowRight, FileText, Mail, Terminal, Database, BrainCircuit, Globe } from 'lucide-react';
 import Button from './Button';
 
 export default function Hero() {
@@ -97,7 +97,7 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* RIGHT SIDE - Restrained Professional Profile & Analytics Motif (~42% width) */}
+          {/* RIGHT SIDE - Premium Executive Dark Portrait (~42% width) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -106,82 +106,31 @@ export default function Hero() {
           >
             <div className="relative w-full max-w-[380px] sm:max-w-[420px]">
               {/* Outer Ambient Glow */}
-              <div className="absolute -inset-1 rounded-[2.5rem] bg-gradient-to-br from-secondary/20 via-primary/15 to-transparent blur-md opacity-60" />
+              <div className="absolute -inset-1.5 rounded-[2.5rem] bg-gradient-to-br from-secondary/30 via-primary/20 to-transparent blur-lg opacity-70" />
               
-              <div className="relative rounded-[2rem] overflow-hidden border border-card-border bg-surface p-7 shadow-xl">
-                
-                {/* Header with verified identity */}
-                <div className="flex items-center justify-between pb-5 border-b border-border mb-6">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full border border-border bg-secondary/15 flex items-center justify-center">
-                      <Sparkles className="w-4 h-4 text-primary" />
-                    </div>
-                    <div>
-                      <h2 className="text-sm font-bold text-foreground">Renuga Sree S</h2>
-                      <p className="text-[11px] font-medium text-primary uppercase tracking-wider">AI &amp; Data Science</p>
-                    </div>
-                  </div>
-                  <span className="px-2.5 py-1 rounded-full text-[10px] font-semibold bg-chip-bg text-primary border border-border">
-                    Verified Profile
-                  </span>
+              <div className="relative rounded-[2rem] overflow-hidden border border-card-border bg-surface shadow-2xl group">
+                {/* 4:5 Executive Studio Portrait */}
+                <div className="relative aspect-[4/5] w-full overflow-hidden bg-surface-soft">
+                  <img 
+                    src="/Portfolio/renuga-dark.jpg" 
+                    alt="Renuga Sree S - AI & Data Science Graduate"
+                    className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
+                  />
+                  {/* Subtle Bottom Vignette */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-surface/50 via-transparent to-transparent pointer-events-none" />
                 </div>
 
-                {/* Technical Core Metrics Motif */}
-                <div className="space-y-3 mb-6">
-                  <div className="p-3.5 rounded-xl bg-surface-soft border border-border flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <TrendingUp className="w-4 h-4 text-primary" />
-                      <div>
-                        <div className="text-xs font-semibold text-foreground">Customer Intelligence</div>
-                        <div className="text-[10px] text-muted">RFM &amp; K-Means Analytics</div>
-                      </div>
-                    </div>
-                    <span className="text-xs font-mono font-bold text-primary">541K+ Rows</span>
+                {/* Editorial Card Footer */}
+                <div className="p-4 sm:p-5 bg-surface border-t border-border flex items-center justify-between">
+                  <div>
+                    <h2 className="text-sm sm:text-base font-bold text-foreground leading-tight">Renuga Sree S</h2>
+                    <p className="text-[11px] font-semibold text-primary uppercase tracking-wider mt-0.5">AI &amp; Data Science Graduate</p>
                   </div>
-
-                  <div className="p-3.5 rounded-xl bg-surface-soft border border-border flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <BrainCircuit className="w-4 h-4 text-primary" />
-                      <div>
-                        <div className="text-xs font-semibold text-foreground">Adaptive Learning Logic</div>
-                        <div className="text-[10px] text-muted">IRT &amp; SM-2 Assistant</div>
-                      </div>
-                    </div>
-                    <span className="text-xs font-mono font-bold text-primary">Python Edition</span>
-                  </div>
-
-                  <div className="p-3.5 rounded-xl bg-surface-soft border border-border flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <Cpu className="w-4 h-4 text-primary" />
-                      <div>
-                        <div className="text-xs font-semibold text-foreground">Full-Stack Architecture</div>
-                        <div className="text-[10px] text-muted">React, Node.js &amp; MongoDB</div>
-                      </div>
-                    </div>
-                    <span className="text-xs font-mono font-bold text-primary">Production Ready</span>
+                  <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-chip-bg border border-border">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                    <span className="text-[10px] font-semibold text-foreground">Available</span>
                   </div>
                 </div>
-
-                {/* Primary Skill Stack Badges */}
-                <div className="pt-4 border-t border-border">
-                  <div className="text-[10px] uppercase font-semibold text-muted tracking-wider mb-2.5">
-                    Core Technical Stack
-                  </div>
-                  <div className="flex flex-wrap gap-1.5 text-xs font-medium">
-                    {["Python", "SQL", "Power BI", "Machine Learning", "React", "Node.js", "MongoDB"].map((tech) => (
-                      <span 
-                        key={tech}
-                        className="px-2.5 py-1 rounded-md bg-chip-bg border border-border text-foreground text-[11px]"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Corner Accents */}
-                <div className="absolute top-3 right-3 w-1.5 h-1.5 rounded-full bg-primary/50" />
-                <div className="absolute bottom-3 left-3 w-1.5 h-1.5 rounded-full bg-primary/50" />
               </div>
             </div>
           </motion.div>

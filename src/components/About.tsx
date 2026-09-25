@@ -49,14 +49,13 @@ export default function About() {
               <div className="relative rounded-3xl overflow-hidden shadow-xl border-2 border-border bg-surface">
                 <div className="aspect-[4/5] w-full overflow-hidden bg-surface-soft relative">
                   <img 
-                    src="/Portfolio/renuga-about-portrait.png" 
-                    alt="Renuga Sree S - Professional Portrait"
-                    className="w-full h-full object-cover object-[20%_20%]"
+                    src="/Portfolio/renuga-light.jpg" 
+                    alt="Renuga Sree S - Turning Data, AI & Code Into Practical Solutions"
+                    className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-[1.02]"
                     onError={(e) => {
-                      // Fallback to banner portrait until user adds renuga-about-portrait.png
                       const target = e.currentTarget;
-                      if (!target.src.endsWith('/Portfolio/renuga-data-science-profile.png')) {
-                        target.src = '/Portfolio/renuga-data-science-profile.png';
+                      if (!target.src.endsWith('/Portfolio/renuga-about-portrait.png')) {
+                        target.src = '/Portfolio/renuga-about-portrait.png';
                       }
                     }}
                   />
