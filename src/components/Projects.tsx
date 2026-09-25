@@ -130,26 +130,26 @@ export default function Projects() {
               </div>
 
               <div className="pt-4 border-t border-border flex flex-col sm:flex-row gap-3">
-                <a 
+                <Button 
                   href="https://renu-s-collection-6lui.onrender.com/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="flex-1"
+                  variant="primary" 
+                  className="flex-1 w-full py-3.5 text-xs sm:text-sm" 
+                  icon={<ExternalLink className="w-4 h-4" />}
                 >
-                  <Button variant="primary" className="w-full py-3.5 text-xs sm:text-sm" icon={<ExternalLink className="w-4 h-4" />}>
-                    Live Demo
-                  </Button>
-                </a>
-                <a 
+                  Live Demo
+                </Button>
+                <Button 
                   href="https://github.com/RENUGASREE" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="flex-1"
+                  variant="secondary" 
+                  className="flex-1 w-full py-3.5 text-xs sm:text-sm" 
+                  icon={<GithubIcon className="w-4 h-4 text-primary" />}
                 >
-                  <Button variant="secondary" className="w-full py-3.5 text-xs sm:text-sm" icon={<GithubIcon className="w-4 h-4 text-primary" />}>
-                    GitHub Profile
-                  </Button>
-                </a>
+                  GitHub Profile
+                </Button>
               </div>
             </div>
 

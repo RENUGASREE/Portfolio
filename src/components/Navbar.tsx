@@ -85,17 +85,15 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Controls (Theme Toggle + Resume) */}
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden lg:flex items-center gap-3">
           <ThemeToggle />
-          <a href="/Portfolio/resume.pdf" download className="group">
-            <Button variant="outline" className="px-5 py-2 text-xs md:text-sm h-10 border-primary/40 text-primary hover:bg-chip-bg hover:border-primary" icon={<FileText className="w-4 h-4" />}>
-              Resume
-            </Button>
-          </a>
+          <Button href="/Portfolio/resume.pdf" download variant="outline" className="px-5 py-2 text-xs md:text-sm h-10 border-primary/40 text-primary hover:bg-chip-bg hover:border-primary" icon={<FileText className="w-4 h-4" />}>
+            Resume
+          </Button>
         </div>
 
         {/* Mobile Controls (Theme Toggle + Menu Button) */}
-        <div className="flex md:hidden items-center gap-2">
+        <div className="flex lg:hidden items-center gap-2">
           <ThemeToggle className="w-9 h-9" />
           <button 
             type="button"
@@ -136,11 +134,9 @@ export default function Navbar() {
             </div>
 
             <div className="pt-3 border-t border-border flex items-center gap-3">
-              <a href="/Portfolio/resume.pdf" download className="w-full">
-                <Button variant="primary" className="w-full py-3 text-sm justify-center" icon={<FileText className="w-4 h-4" />}>
-                  Download Resume
-                </Button>
-              </a>
+              <Button href="/Portfolio/resume.pdf" download variant="primary" className="w-full py-3 text-sm justify-center" icon={<FileText className="w-4 h-4" />}>
+                Download Resume
+              </Button>
             </div>
           </motion.div>
         )}

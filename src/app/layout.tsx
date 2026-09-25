@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/Portfolio/renuga-data-science-profile.png",
-        width: 1200,
-        height: 630,
+        width: 1254,
+        height: 1254,
         alt: "Renuga Sree S - AI & Data Science Graduate",
       },
     ],

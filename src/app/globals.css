@@ -80,6 +80,9 @@ html[data-theme="light"] {
     color: var(--foreground);
     transition: background-color 0.25s ease, color 0.25s ease;
   }
+  [id] {
+    scroll-margin-top: 6rem;
+  }
 }
 
 .glass {

@@ -107,16 +107,12 @@ export default function FeaturedCaseStudy() {
 
             {/* Project Actions */}
             <div className="flex flex-wrap items-center gap-4">
-              <a href="https://python-edition.onrender.com" target="_blank" rel="noopener noreferrer">
-                <Button variant="primary" className="px-6 py-3.5 text-sm" icon={<ExternalLink className="w-4 h-4" />}>
-                  Live Project
-                </Button>
-              </a>
-              <a href="https://github.com/RENUGASREE/Python_Edition" target="_blank" rel="noopener noreferrer">
-                <Button variant="secondary" className="px-6 py-3.5 text-sm" icon={<GithubIcon className="w-4 h-4 text-primary" />}>
-                  View GitHub Repository
-                </Button>
-              </a>
+              <Button href="https://python-edition.onrender.com" target="_blank" rel="noopener noreferrer" variant="primary" className="px-6 py-3.5 text-sm" icon={<ExternalLink className="w-4 h-4" />}>
+                Live Project
+              </Button>
+              <Button href="https://github.com/RENUGASREE/Python_Edition" target="_blank" rel="noopener noreferrer" variant="secondary" className="px-6 py-3.5 text-sm" icon={<GithubIcon className="w-4 h-4 text-primary" />}>
+                View GitHub Repository
+              </Button>
             </div>
 
           </div>

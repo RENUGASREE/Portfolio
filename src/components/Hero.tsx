@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import { motion } from 'framer-motion';
@@ -57,23 +58,17 @@ export default function Hero() {
 
             {/* CTAs */}
             <div className="flex flex-wrap items-center gap-3.5 mb-10">
-              <a href="#projects">
-                <Button variant="primary" className="px-6 py-3 text-sm sm:text-base" icon={<ArrowRight className="w-4 h-4" />}>
-                  View Projects
-                </Button>
-              </a>
+              <Button href="#projects" variant="primary" className="px-6 py-3 text-sm sm:text-base" icon={<ArrowRight className="w-4 h-4" />}>
+                View Projects
+              </Button>
               
-              <a href="/Portfolio/resume.pdf" download>
-                <Button variant="secondary" className="px-6 py-3 text-sm sm:text-base" icon={<FileText className="w-4 h-4 text-primary" />}>
-                  Download Resume
-                </Button>
-              </a>
+              <Button href="/Portfolio/resume.pdf" download variant="secondary" className="px-6 py-3 text-sm sm:text-base" icon={<FileText className="w-4 h-4 text-primary" />}>
+                Download Resume
+              </Button>
 
-              <a href="#contact">
-                <Button variant="outline" className="px-6 py-3 text-sm sm:text-base" icon={<Mail className="w-4 h-4 text-primary" />}>
-                  Contact Me
-                </Button>
-              </a>
+              <Button href="#contact" variant="outline" className="px-6 py-3 text-sm sm:text-base" icon={<Mail className="w-4 h-4 text-primary" />}>
+                Contact Me
+              </Button>
             </div>
 
             {/* Minimal Capabilities Row */}

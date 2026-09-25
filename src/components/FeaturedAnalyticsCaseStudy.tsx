@@ -205,16 +205,16 @@ export default function FeaturedAnalyticsCaseStudy() {
 
             {/* CTAs */}
             <div className="pt-2">
-              <a 
+              <Button 
                 href="https://github.com/RENUGASREE/RenugaSree_AI-Powered-E-Commerce-Customer-Intelligence-and-Sales-Analytics"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-block"
+                variant="primary" 
+                className="w-full sm:w-auto px-7 py-3.5 text-sm" 
+                icon={<GithubIcon className="w-4 h-4" />}
               >
-                <Button variant="primary" className="w-full sm:w-auto px-7 py-3.5 text-sm" icon={<GithubIcon className="w-4 h-4" />}>
-                  View Full Analysis on GitHub
-                </Button>
-              </a>
+                View Full Analysis on GitHub
+              </Button>
             </div>
           </div>
 

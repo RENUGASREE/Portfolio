@@ -27,39 +27,46 @@ export default function Footer() {
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3">
-            <a href="mailto:renugasree28@gmail.com" className="w-full sm:w-auto">
-              <Button variant="primary" className="w-full sm:w-auto px-7 py-3.5 text-sm" icon={<Mail className="w-4 h-4" />}>
-                Email Me
-              </Button>
-            </a>
+            <Button 
+              href="mailto:renugasree28@gmail.com" 
+              variant="primary" 
+              className="w-full sm:w-auto px-7 py-3.5 text-sm" 
+              icon={<Mail className="w-4 h-4" />}
+            >
+              Email Me
+            </Button>
 
-            <a 
+            <Button 
               href="https://www.linkedin.com/in/renuga-sree-64b8342a8/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-full sm:w-auto"
+              variant="secondary" 
+              className="w-full sm:w-auto px-6 py-3.5 text-sm" 
+              icon={<LinkedinIcon className="w-4 h-4 text-primary" />}
             >
-              <Button variant="secondary" className="w-full sm:w-auto px-6 py-3.5 text-sm" icon={<LinkedinIcon className="w-4 h-4 text-primary" />}>
-                LinkedIn
-              </Button>
-            </a>
+              LinkedIn
+            </Button>
 
-            <a 
+            <Button 
               href="https://github.com/RENUGASREE" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-full sm:w-auto"
+              variant="secondary" 
+              className="w-full sm:w-auto px-6 py-3.5 text-sm" 
+              icon={<GithubIcon className="w-4 h-4 text-primary" />}
             >
-              <Button variant="secondary" className="w-full sm:w-auto px-6 py-3.5 text-sm" icon={<GithubIcon className="w-4 h-4 text-primary" />}>
-                GitHub
-              </Button>
-            </a>
+              GitHub
+            </Button>
 
-            <a href="/Portfolio/resume.pdf" download className="w-full sm:w-auto">
-              <Button variant="outline" className="w-full sm:w-auto px-6 py-3.5 text-sm" icon={<FileDown className="w-4 h-4 text-primary" />}>
-                Download Resume
-              </Button>
-            </a>
+            <Button 
+              href="/Portfolio/resume.pdf" 
+              download 
+              variant="outline" 
+              className="w-full sm:w-auto px-6 py-3.5 text-sm" 
+              icon={<FileDown className="w-4 h-4 text-primary" />}
+            >
+              Download Resume
+            </Button>
           </div>
 
         </div>
@@ -79,34 +86,31 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-3">
-            <a 
+            <Button 
               href="https://github.com/RENUGASREE" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="GitHub Profile"
+              variant="icon"
             >
-              <Button variant="icon">
-                <GithubIcon className="w-4 h-4" />
-              </Button>
-            </a>
-            <a 
+              <GithubIcon className="w-4 h-4" />
+            </Button>
+            <Button 
               href="https://www.linkedin.com/in/renuga-sree-64b8342a8/" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="LinkedIn Profile"
+              variant="icon"
             >
-              <Button variant="icon">
-                <LinkedinIcon className="w-4 h-4" />
-              </Button>
-            </a>
-            <a 
+              <LinkedinIcon className="w-4 h-4" />
+            </Button>
+            <Button 
               href="mailto:renugasree28@gmail.com"
               aria-label="Send Email"
+              variant="icon"
             >
-              <Button variant="icon">
-                <Mail className="w-4 h-4" />
-              </Button>
-            </a>
+              <Mail className="w-4 h-4" />
+            </Button>
           </div>
 
         </div>
