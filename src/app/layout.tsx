@@ -5,14 +5,45 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://renugasree.github.io/Portfolio"),
   title: "Renuga Sree S | AI & Data Science Graduate",
-  description: "Artificial Intelligence and Data Science graduate experienced in Python, SQL, Machine Learning, AI, and full-stack development, building data-driven applications.",
-  keywords: ["AI Engineer", "Data Scientist", "Full-Stack Developer", "Python", "Machine Learning", "Renuga Sree S", "Data Analytics"],
+  description: "Portfolio of Renuga Sree S, an Artificial Intelligence and Data Science graduate with experience in data analytics, machine learning, AI-based applications, Python, SQL, Power BI, and full-stack development.",
+  keywords: [
+    "Renuga Sree",
+    "Data Science",
+    "Data Analyst",
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Python",
+    "SQL",
+    "Power BI",
+    "AI Portfolio",
+    "Data Analytics",
+    "Full-Stack Development"
+  ],
   authors: [{ name: "Renuga Sree S" }],
+  creator: "Renuga Sree S",
   openGraph: {
     title: "Renuga Sree S | AI & Data Science Graduate",
-    description: "Artificial Intelligence and Data Science graduate experienced in Python, SQL, Machine Learning, AI, and full-stack development.",
+    description: "Portfolio of Renuga Sree S, an Artificial Intelligence and Data Science graduate with experience in data analytics, machine learning, AI-based applications, Python, SQL, Power BI, and full-stack development.",
+    url: "https://renugasree.github.io/Portfolio/",
+    siteName: "Renuga Sree S Portfolio",
+    images: [
+      {
+        url: "/Portfolio/renuga-data-science-profile.png",
+        width: 1200,
+        height: 630,
+        alt: "Renuga Sree S - AI & Data Science Graduate",
+      },
+    ],
+    locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Renuga Sree S | AI & Data Science Graduate",
+    description: "Portfolio of Renuga Sree S, an Artificial Intelligence and Data Science graduate with experience in data analytics, machine learning, AI-based applications, Python, SQL, Power BI, and full-stack development.",
+    images: ["/Portfolio/renuga-data-science-profile.png"],
   },
 };
 
@@ -23,7 +54,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} font-sans antialiased bg-[#080808] text-[#F5F3EF]`}>
         {children}
       </body>
     </html>

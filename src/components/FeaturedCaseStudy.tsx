@@ -1,190 +1,176 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { Layers, Server, Shield, Activity, Code2, Globe, ExternalLink, Cpu, CheckCircle2, FileDown, BrainCircuit } from 'lucide-react';
+import { Layers, Server, Code2, ExternalLink, BrainCircuit, CheckCircle2 } from 'lucide-react';
 import Button from './Button';
 import { GithubIcon } from './Icons';
 
 export default function FeaturedCaseStudy() {
   return (
-    <section id="projects" className="py-32 bg-[#050505] relative overflow-hidden">
-      {/* Background Aesthetic */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-[#800000]/10 blur-[120px] rounded-full pointer-events-none translate-x-1/2" />
+    <section id="projects" className="py-28 md:py-32 bg-[#080808] relative overflow-hidden border-t border-[rgba(210,166,109,0.12)]">
+      {/* Background Subtle Burgundy Glow */}
+      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-[#5A1720]/15 blur-[140px] rounded-full pointer-events-none" />
       
       <div className="section-container relative z-10">
-        <div className="mb-24">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="flex items-center gap-3 text-xs font-bold tracking-[0.3em] text-[#C19A6B] uppercase mb-6"
-          >
-            <span className="w-12 h-[1.5px] bg-[#800000]" /> Featured Flagship Project
-          </motion.div>
-          <motion.h3 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-5xl md:text-7xl font-bold mb-8 tracking-tight leading-[1.1]"
-          >
-            Python Edition <br />
-            <span className="text-[#C19A6B] text-4xl md:text-5xl italic">Adaptive & Interactive Learning Assistant</span>
-          </motion.h3>
-          <p className="text-xl md:text-2xl text-white/70 max-w-4xl leading-relaxed font-medium mb-4">
-            An AI-powered adaptive learning platform that personalizes Python education through intelligent recommendations, mastery tracking, and real-time coding practice.
+        
+        {/* Section Header */}
+        <div className="mb-16 md:mb-20">
+          <div className="inline-flex items-center gap-2.5 px-3 py-1 mb-4 text-xs font-semibold tracking-[0.2em] text-[#D2A66D] uppercase border border-[rgba(210,166,109,0.3)] rounded-full bg-[rgba(90,23,32,0.15)]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#D2A66D]" />
+            Flagship AI &amp; Software Case Study
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#F5F3EF] mb-4">
+            Python Edition
+          </h2>
+          <p className="text-xl sm:text-2xl text-[#D2A66D] font-medium mb-5">
+            Adaptive AI-Powered Interactive Learning Assistant
           </p>
-          <p className="text-lg text-white/50 max-w-4xl leading-relaxed">
-            The platform combines adaptive learning algorithms, AI tutoring, coding challenges, real-time code execution, mastery tracking, and intelligent revision scheduling to improve learning outcomes.
+          <p className="text-sm sm:text-base md:text-lg text-[#A8A29B] max-w-3xl leading-relaxed">
+            An adaptive Python learning platform combining learner analytics, AI-assisted tutoring, coding practice, mastery tracking, and personalized learning paths.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          {/* Left Column: Features & Systems (7 cols) */}
-          <div className="lg:col-span-7 space-y-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              <div className="space-y-6">
-                <div className="w-12 h-12 bg-[#800000]/10 rounded-2xl flex items-center justify-center border border-[#800000]/30">
-                    <BrainCircuit className="w-6 h-6 text-[#C19A6B]" />
+        {/* Two-Column Showcase */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+          
+          {/* Left Column: Systems & Architecture (7 cols) */}
+          <div className="lg:col-span-7 space-y-10">
+            
+            {/* Features Breakdown */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="p-6 rounded-2xl bg-[rgba(255,255,255,0.02)] border border-[rgba(210,166,109,0.16)]">
+                <div className="w-10 h-10 rounded-xl bg-[rgba(90,23,32,0.2)] flex items-center justify-center border border-[rgba(210,166,109,0.3)] mb-4">
+                  <BrainCircuit className="w-5 h-5 text-[#D2A66D]" />
                 </div>
-                <h4 className="text-2xl font-bold text-white">AI & Adaptive Engine</h4>
-                <ul className="text-white/60 leading-relaxed space-y-2 list-disc pl-5">
-                  <li>AI-Powered Python Tutor</li>
-                  <li>Adaptive Learning Engine (IRT + SM-2)</li>
-                  <li>Knowledge Graph-Based Recommendations</li>
-                  <li>Intelligent Revision Scheduling</li>
+                <h3 className="text-base font-bold text-[#F5F3EF] mb-3">Adaptive &amp; AI Intelligence</h3>
+                <ul className="text-xs sm:text-sm text-[#A8A29B] space-y-2">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#D2A66D] shrink-0" />
+                    <span>Learner ability estimation &amp; analytics</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#D2A66D] shrink-0" />
+                    <span>Topic &amp; mastery tracking (IRT logic)</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#D2A66D] shrink-0" />
+                    <span>AI-assisted tutoring &amp; contextual hints</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#D2A66D] shrink-0" />
+                    <span>Spaced-repetition revision scheduling</span>
+                  </li>
                 </ul>
               </div>
-              <div className="space-y-6">
-                <div className="w-12 h-12 bg-[#C19A6B]/10 rounded-2xl flex items-center justify-center border border-[#C19A6B]/30">
-                    <Code2 className="w-6 h-6 text-[#C19A6B]" />
+
+              <div className="p-6 rounded-2xl bg-[rgba(255,255,255,0.02)] border border-[rgba(210,166,109,0.16)]">
+                <div className="w-10 h-10 rounded-xl bg-[rgba(90,23,32,0.2)] flex items-center justify-center border border-[rgba(210,166,109,0.3)] mb-4">
+                  <Code2 className="w-5 h-5 text-[#D2A66D]" />
                 </div>
-                <h4 className="text-2xl font-bold text-white">Interactive Platform</h4>
-                <ul className="text-white/60 leading-relaxed space-y-2 list-disc pl-5">
-                  <li>Interactive Python Compiler</li>
-                  <li>Personalized Learning Paths</li>
-                  <li>Progress Analytics Dashboard</li>
-                  <li>Coding Challenges & Projects</li>
+                <h3 className="text-base font-bold text-[#F5F3EF] mb-3">Interactive Learning System</h3>
+                <ul className="text-xs sm:text-sm text-[#A8A29B] space-y-2">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#D2A66D] shrink-0" />
+                    <span>In-browser interactive Python coding</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#D2A66D] shrink-0" />
+                    <span>Placement assessment &amp; diagnostic quizzes</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#D2A66D] shrink-0" />
+                    <span>Dynamic coding challenges with tests</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#D2A66D] shrink-0" />
+                    <span>Performance analytics &amp; streak tracking</span>
+                  </li>
                 </ul>
               </div>
             </div>
 
-            <div className="p-10 glass rounded-[2.5rem] border border-[#800000]/20 bg-gradient-to-br from-white/[0.05] to-transparent shadow-2xl relative group">
-              <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#800000]/20 blur-[60px] rounded-full group-hover:bg-[#800000]/30 transition-all duration-700" />
-              
-              <h4 className="text-xl font-bold mb-10 flex items-center gap-3">
-                <Layers className="w-5 h-5 text-[#C19A6B]" /> Technical Architecture
-              </h4>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-                <div className="space-y-2">
-                  <span className="text-[10px] uppercase tracking-widest font-bold text-[#C19A6B]/70">Frontend</span>
-                  <p className="text-sm font-bold text-white/90">React + TypeScript</p>
-                </div>
-                <div className="space-y-2">
-                  <span className="text-[10px] uppercase tracking-widest font-bold text-[#C19A6B]/70">Backend</span>
-                  <p className="text-sm font-bold text-white/90">Node.js + Express.js</p>
-                </div>
-                <div className="space-y-2">
-                  <span className="text-[10px] uppercase tracking-widest font-bold text-[#C19A6B]/70">Database</span>
-                  <p className="text-sm font-bold text-white/90">MongoDB Atlas</p>
-                </div>
-                <div className="space-y-2">
-                  <span className="text-[10px] uppercase tracking-widest font-bold text-[#C19A6B]/70">AI Integration</span>
-                  <p className="text-sm font-bold text-white/90">OpenRouter / OpenAI APIs</p>
-                </div>
-                <div className="space-y-2">
-                  <span className="text-[10px] uppercase tracking-widest font-bold text-[#C19A6B]/70">Styling</span>
-                  <p className="text-sm font-bold text-white/90">Tailwind CSS + Framer Motion</p>
-                </div>
-                <div className="space-y-2">
-                  <span className="text-[10px] uppercase tracking-widest font-bold text-[#C19A6B]/70">Deployment</span>
-                  <p className="text-sm font-bold text-white/90">Render</p>
-                </div>
+            {/* Technical Stack Card */}
+            <div className="p-6 sm:p-7 rounded-2xl bg-[rgba(255,255,255,0.02)] border border-[rgba(210,166,109,0.2)]">
+              <h3 className="text-sm font-bold uppercase tracking-wider text-[#D2A66D] flex items-center gap-2.5 mb-5">
+                <Layers className="w-4 h-4 text-[#D2A66D]" /> Technology Stack
+              </h3>
+              <div className="flex flex-wrap gap-2.5">
+                {["React", "TypeScript", "Node.js", "Express.js", "MongoDB", "JWT", "Tailwind CSS"].map((tech) => (
+                  <span 
+                    key={tech}
+                    className="px-3.5 py-1.5 text-xs font-medium rounded-lg bg-[rgba(210,166,109,0.08)] border border-[rgba(210,166,109,0.25)] text-[#F5F3EF]"
+                  >
+                    {tech}
+                  </span>
+                ))}
               </div>
             </div>
 
-            <div className="flex flex-wrap items-center gap-6">
+            {/* Project Actions */}
+            <div className="flex flex-wrap items-center gap-4">
               <a href="https://python-edition.onrender.com" target="_blank" rel="noopener noreferrer">
-                <Button className="px-10 py-5 bg-[#800000] hover:bg-[#600000] border-transparent shadow-lg" icon={<ExternalLink className="w-5 h-5" />}>
-                  Live Demo
+                <Button variant="primary" className="px-6 py-3.5 text-sm" icon={<ExternalLink className="w-4 h-4" />}>
+                  Live Project
                 </Button>
               </a>
               <a href="https://github.com/RENUGASREE/Python_Edition" target="_blank" rel="noopener noreferrer">
-                <Button variant="secondary" className="px-8 py-5 border-[#C19A6B]/30 hover:bg-[#C19A6B]/10" icon={<GithubIcon className="w-5 h-5" />}>
-                  GitHub Repository
+                <Button variant="secondary" className="px-6 py-3.5 text-sm" icon={<GithubIcon className="w-4 h-4 text-[#D2A66D]" />}>
+                  View GitHub Repository
                 </Button>
               </a>
             </div>
+
           </div>
 
-          {/* Right Column: Visual Showcase (5 cols) */}
-          <div className="lg:col-span-5 space-y-10">
-            {/* Project Details Mock */}
-            <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="glass p-8 rounded-[2rem] border-[#800000]/20 bg-[#800000]/[0.05] shadow-xl"
-            >
-                <div className="flex justify-between items-center mb-8">
-                    <div className="flex items-center gap-3">
-                        <div className="w-2.5 h-2.5 rounded-full bg-[#C19A6B] shadow-[0_0_10px_rgba(193,154,107,0.6)]" />
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-white/60">Core Modules</span>
-                    </div>
-                    <Server className="w-4 h-4 text-[#C19A6B]" />
+          {/* Right Column: Code & Architecture Overview (5 cols) */}
+          <div className="lg:col-span-5 space-y-6">
+            
+            {/* Logic Sample Card */}
+            <div className="rounded-2xl border border-[rgba(210,166,109,0.2)] bg-[#0D0D0D] overflow-hidden shadow-xl">
+              <div className="px-5 py-3 border-b border-[rgba(210,166,109,0.16)] flex items-center justify-between bg-[rgba(255,255,255,0.02)]">
+                <div className="flex items-center gap-2">
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#5A1720]" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#7D4149]" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#D2A66D]" />
                 </div>
-                <div className="space-y-6">
-                    <div className="space-y-2">
-                        <h5 className="text-sm font-bold text-white">Full-Stack Implementation</h5>
-                        <p className="text-xs text-white/60 leading-relaxed">Integrated a responsive React frontend with a scalable Node.js backend to manage users, progress, and compilation.</p>
-                    </div>
-                    <div className="space-y-2">
-                        <h5 className="text-sm font-bold text-white">Data Modeling</h5>
-                        <p className="text-xs text-white/60 leading-relaxed">Utilized MongoDB Atlas for flexible, document-based storage of complex learning graphs and user metrics.</p>
-                    </div>
-                    <div className="space-y-2">
-                        <h5 className="text-sm font-bold text-white">Intelligent Features</h5>
-                        <p className="text-xs text-white/60 leading-relaxed">Implemented AI APIs for tutoring, alongside JWT Authentication and Monaco Editor for real-time coding.</p>
-                    </div>
-                </div>
-            </motion.div>
-
-            {/* Code Visualization Mock */}
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.98 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="bg-[#050505] border border-white/10 rounded-[2rem] overflow-hidden shadow-2xl relative"
-            >
-              <div className="bg-white/5 px-6 py-4 border-b border-white/10 flex justify-between items-center">
-                <div className="flex gap-2">
-                  <div className="w-3 h-3 rounded-full bg-[#800000]/60" />
-                  <div className="w-3 h-3 rounded-full bg-[#C19A6B]/60" />
-                  <div className="w-3 h-3 rounded-full bg-white/20" />
-                </div>
-                <span className="text-[10px] font-mono text-white/30 uppercase tracking-widest italic">adaptive_logic.ts</span>
+                <span className="text-[11px] font-mono text-[#A8A29B]">adaptive_mastery.ts</span>
               </div>
-              <div className="p-8 font-mono text-sm leading-relaxed overflow-x-auto bg-black">
-                <pre className="text-[#C19A6B]/80">
-{`async function getNextActivity(userId: string) {
-  // Fetch user mastery graph
-  const mastery = await db.Mastery.findOne({ userId });
+              <div className="p-5 font-mono text-xs leading-relaxed overflow-x-auto text-[#A8A29B]">
+                <pre className="text-[#D2A66D]/90">
+{`// Evaluate learner ability & update pathway
+interface LearnerProfile {
+  abilityTheta: number; // IRT Latent Ability
+  masteryScore: Record<string, number>;
+  repetitionInterval: number; // SM-2 Days
+}
+
+async function recommendNextChallenge(
+  learner: LearnerProfile,
+  topicId: string
+) {
+  const dueReviews = getSpacedRepetitionDue(learner);
+  if (dueReviews.length > 0) return dueReviews[0];
   
-  // Calculate Item Response Theory (IRT)
-  const recommendations = await computeIRT(mastery);
-  
-  // Apply Spaced Repetition (SM-2)
-  const dueItems = getDueRevisions(mastery, new Date());
-  
-  return mergePaths(recommendations, dueItems);
+  return getOptimalChallenge(learner.abilityTheta, topicId);
 }`}
                 </pre>
               </div>
-              <div className="absolute bottom-4 right-6 opacity-10 pointer-events-none">
-                 <Code2 className="w-20 h-20 text-white" />
+            </div>
+
+            {/* Architecture Highlights Card */}
+            <div className="p-6 rounded-2xl bg-[rgba(255,255,255,0.02)] border border-[rgba(210,166,109,0.16)]">
+              <div className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-wider text-[#D2A66D] mb-3">
+                <Server className="w-4 h-4 text-[#D2A66D]" />
+                <span>Backend &amp; Data Persistence</span>
               </div>
-            </motion.div>
+              <p className="text-xs sm:text-sm text-[#A8A29B] leading-relaxed">
+                Utilizes Express.js APIs for user tracking, JWT authentication for secure session isolation, and MongoDB collections for persisting detailed attempt history and progressive learner competence graphs.
+              </p>
+            </div>
+
           </div>
+
         </div>
+
       </div>
     </section>
   );

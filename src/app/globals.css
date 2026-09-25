@@ -2,12 +2,12 @@
 
 @theme {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --color-background: #0a0a0a;
-  --color-foreground: #ededed;
-  --color-accent: #3b82f6;
-  --color-border: #262626;
-  --color-card: #141414;
-  --color-muted: #737373;
+  --color-background: #080808;
+  --color-foreground: #F5F3EF;
+  --color-accent: #D2A66D;
+  --color-border: rgba(210, 166, 109, 0.16);
+  --color-card: rgba(255, 255, 255, 0.03);
+  --color-muted: #A8A29B;
 }
 
 @layer base {
@@ -15,18 +15,20 @@
     border-color: var(--color-border);
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[#080808] text-[#F5F3EF];
+    background-color: #080808;
+    color: #F5F3EF;
   }
 }
 
 .glass {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(210, 166, 109, 0.16);
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#D5A66A] via-[#E5C79A] to-[#F3EEE7];
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#D2A66D] via-[#F3EEE7] to-[#D2A66D];
 }
 
 .section-container {
@@ -34,10 +36,10 @@
 }
 
 .hero-gradient {
-  background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+  background: radial-gradient(circle at 50% 50%, rgba(90, 23, 32, 0.15) 0%, transparent 60%);
 }
 
 .grid-pattern {
-  background-image: radial-gradient(#262626 1px, transparent 1px);
-  background-size: 40px 40px;
+  background-image: radial-gradient(rgba(125, 65, 73, 0.15) 1px, transparent 1px);
+  background-size: 36px 36px;
 }

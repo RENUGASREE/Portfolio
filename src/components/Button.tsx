@@ -15,23 +15,22 @@ export default function Button({
 }: ButtonProps) {
   
   const variants = {
-    primary: "bg-[#D5A66A] text-[#0B0B0B] shadow-[0_0_20px_rgba(213,166,106,0.15)] hover:shadow-[0_0_30px_rgba(213,166,106,0.3)] border-transparent",
-    secondary: "bg-white/5 text-[#F3EEE7] hover:bg-white/10 border-white/10",
-    outline: "bg-transparent text-[#F3EEE7] border-[rgba(213,166,106,0.5)] hover:bg-[#D5A66A]/10 hover:border-[#D5A66A]",
-    icon: "p-3 rounded-full border border-white/10 glass hover:bg-[#D5A66A]/10 hover:border-[#D5A66A]/40 text-[#A8A29B] hover:text-[#D5A66A]"
+    primary: "bg-[#D2A66D] text-[#080808] font-bold shadow-[0_0_20px_rgba(210,166,109,0.2)] hover:bg-[#E5C79A] hover:shadow-[0_0_25px_rgba(210,166,109,0.35)] border-transparent hover:-translate-y-0.5",
+    secondary: "bg-[rgba(255,255,255,0.03)] text-[#F5F3EF] hover:bg-[rgba(210,166,109,0.08)] border border-[rgba(210,166,109,0.25)] hover:border-[#D2A66D] hover:-translate-y-0.5",
+    outline: "bg-transparent text-[#F5F3EF] border border-[rgba(210,166,109,0.3)] hover:bg-[rgba(210,166,109,0.08)] hover:border-[#D2A66D] hover:-translate-y-0.5",
+    icon: "p-3 rounded-full border border-[rgba(210,166,109,0.2)] bg-[rgba(255,255,255,0.03)] hover:bg-[rgba(210,166,109,0.12)] hover:border-[#D2A66D]/50 text-[#A8A29B] hover:text-[#D2A66D] hover:-translate-y-0.5"
   }
 
-  const baseStyles = "relative flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl font-bold tracking-tight transition-all duration-300 border focus:outline-none focus:ring-2 focus:ring-[#D5A66A]/50 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden group text-sm md:text-base";
+  const baseStyles = "relative inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-semibold tracking-tight transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#D2A66D]/40 disabled:opacity-50 disabled:cursor-not-allowed group text-sm md:text-base cursor-pointer";
   
   // Specific style for icon-only variant
   if (variant === 'icon') {
     return (
       <button 
-        className={cn(variants.icon, "relative overflow-hidden group focus:outline-none focus:ring-2 focus:ring-[#D5A66A]/50 transition-all duration-300", className)} 
+        className={cn(variants.icon, "relative transition-all duration-300", className)} 
         {...props}
       >
         <span className="relative z-10">{children}</span>
-        <div className="absolute inset-0 bg-[#D5A66A]/0 group-hover:bg-[#D5A66A]/10 transition-colors duration-500 rounded-full" />
       </button>
     )
   }
@@ -41,25 +40,14 @@ export default function Button({
       className={cn(baseStyles, variants[variant], className)}
       {...props}
     >
-      {/* Premium Hover Glow Effect */}
-      <div className="absolute inset-0 bg-[#D5A66A]/0 group-hover:bg-[#D5A66A]/10 transition-colors duration-500" />
-      
-      {/* Animated Gradient Shine */}
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-        <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-[-20deg]" />
-      </div>
-
       <span className="relative z-10 flex items-center gap-2">
         {children}
       </span>
       {icon && (
-        <span className="relative z-10 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300 text-current">
+        <span className="relative z-10 transform group-hover:translate-x-0.5 transition-transform duration-300 text-current">
           {icon}
         </span>
       )}
-      
-      {/* Edge Highlight for Premium Feel */}
-      <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#D5A66A]/0 group-hover:bg-[#D5A66A]/50 transition-all duration-500 blur-[2px]" />
     </button>
   )
 }
